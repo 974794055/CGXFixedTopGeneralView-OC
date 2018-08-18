@@ -13,9 +13,11 @@
 		B56BCB702127E6FB004C069E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B56BCB6F2127E6FB004C069E /* Assets.xcassets */; };
 		B56BCB732127E6FB004C069E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56BCB712127E6FB004C069E /* LaunchScreen.storyboard */; };
 		B56BCB762127E6FB004C069E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B56BCB752127E6FB004C069E /* main.m */; };
+		FC933D83405FAE3FA54A8F2F /* libPods-CGXFixedTopGeneralView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE799EB018F870AAAA3D851 /* libPods-CGXFixedTopGeneralView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D45C3398FA96285DB11352C /* Pods-CGXFixedTopGeneralView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGXFixedTopGeneralView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CGXFixedTopGeneralView/Pods-CGXFixedTopGeneralView.debug.xcconfig"; sourceTree = "<group>"; };
 		B56BCB632127E6F5004C069E /* CGXFixedTopGeneralView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGXFixedTopGeneralView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56BCB662127E6F5004C069E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B56BCB672127E6F5004C069E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		B56BCB722127E6FB004C069E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B56BCB742127E6FB004C069E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B56BCB752127E6FB004C069E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D42343D057CECEFFD5D202A1 /* Pods-CGXFixedTopGeneralView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGXFixedTopGeneralView.release.xcconfig"; path = "Pods/Target Support Files/Pods-CGXFixedTopGeneralView/Pods-CGXFixedTopGeneralView.release.xcconfig"; sourceTree = "<group>"; };
+		FBE799EB018F870AAAA3D851 /* libPods-CGXFixedTopGeneralView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CGXFixedTopGeneralView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC933D83405FAE3FA54A8F2F /* libPods-CGXFixedTopGeneralView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C53812AAC1CB99838DC48B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBE799EB018F870AAAA3D851 /* libPods-CGXFixedTopGeneralView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E5ABE289844F6206D1D6058 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D45C3398FA96285DB11352C /* Pods-CGXFixedTopGeneralView.debug.xcconfig */,
+				D42343D057CECEFFD5D202A1 /* Pods-CGXFixedTopGeneralView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B56BCB5A2127E6F5004C069E = {
 			isa = PBXGroup;
 			children = (
 				B56BCB652127E6F5004C069E /* CGXFixedTopGeneralView */,
 				B56BCB642127E6F5004C069E /* Products */,
+				9E5ABE289844F6206D1D6058 /* Pods */,
+				5C53812AAC1CB99838DC48B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B56BCB792127E6FB004C069E /* Build configuration list for PBXNativeTarget "CGXFixedTopGeneralView" */;
 			buildPhases = (
+				1A7B7DA0D3CB12945356CCAF /* [CP] Check Pods Manifest.lock */,
 				B56BCB5F2127E6F5004C069E /* Sources */,
 				B56BCB602127E6F5004C069E /* Frameworks */,
 				B56BCB612127E6F5004C069E /* Resources */,
@@ -135,6 +160,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A7B7DA0D3CB12945356CCAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CGXFixedTopGeneralView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B56BCB5F2127E6F5004C069E /* Sources */ = {
@@ -281,15 +327,13 @@
 		};
 		B56BCB7A2127E6FB004C069E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D45C3398FA96285DB11352C /* Pods-CGXFixedTopGeneralView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 424D9G4X35;
 				INFOPLIST_FILE = CGXFixedTopGeneralView/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cgx.work.CGXFixedTopGeneralView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,15 +342,13 @@
 		};
 		B56BCB7B2127E6FB004C069E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D42343D057CECEFFD5D202A1 /* Pods-CGXFixedTopGeneralView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 424D9G4X35;
 				INFOPLIST_FILE = CGXFixedTopGeneralView/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cgx.work.CGXFixedTopGeneralView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
