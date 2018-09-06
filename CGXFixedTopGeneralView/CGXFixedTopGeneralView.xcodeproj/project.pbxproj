@@ -13,6 +13,11 @@
 		B56BCB702127E6FB004C069E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B56BCB6F2127E6FB004C069E /* Assets.xcassets */; };
 		B56BCB732127E6FB004C069E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56BCB712127E6FB004C069E /* LaunchScreen.storyboard */; };
 		B56BCB762127E6FB004C069E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B56BCB752127E6FB004C069E /* main.m */; };
+		B5CC10F1213D023B00DD9186 /* CGXFixedTopGeneralTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CC10F0213D023B00DD9186 /* CGXFixedTopGeneralTitleView.m */; };
+		B5CC10F4213D025000DD9186 /* CGXFixedTopGeneralTitleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CC10F3213D025000DD9186 /* CGXFixedTopGeneralTitleManager.m */; };
+		B5CC10F7213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CC10F6213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.m */; };
+		B5CC10FA213D028100DD9186 /* CGXFixedTopGeneralTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CC10F9213D028100DD9186 /* CGXFixedTopGeneralTitleCell.m */; };
+		B5CC10FD213D02C200DD9186 /* CGXFixedTopGeneralMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CC10FC213D02C200DD9186 /* CGXFixedTopGeneralMenuView.m */; };
 		FC933D83405FAE3FA54A8F2F /* libPods-CGXFixedTopGeneralView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE799EB018F870AAAA3D851 /* libPods-CGXFixedTopGeneralView.a */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +33,16 @@
 		B56BCB722127E6FB004C069E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B56BCB742127E6FB004C069E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B56BCB752127E6FB004C069E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B5CC10EF213D023B00DD9186 /* CGXFixedTopGeneralTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopGeneralTitleView.h; sourceTree = "<group>"; };
+		B5CC10F0213D023B00DD9186 /* CGXFixedTopGeneralTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopGeneralTitleView.m; sourceTree = "<group>"; };
+		B5CC10F2213D025000DD9186 /* CGXFixedTopGeneralTitleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopGeneralTitleManager.h; sourceTree = "<group>"; };
+		B5CC10F3213D025000DD9186 /* CGXFixedTopGeneralTitleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopGeneralTitleManager.m; sourceTree = "<group>"; };
+		B5CC10F5213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopGeneralTitleItem.h; sourceTree = "<group>"; };
+		B5CC10F6213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopGeneralTitleItem.m; sourceTree = "<group>"; };
+		B5CC10F8213D028100DD9186 /* CGXFixedTopGeneralTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopGeneralTitleCell.h; sourceTree = "<group>"; };
+		B5CC10F9213D028100DD9186 /* CGXFixedTopGeneralTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopGeneralTitleCell.m; sourceTree = "<group>"; };
+		B5CC10FB213D02C200DD9186 /* CGXFixedTopGeneralMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopGeneralMenuView.h; sourceTree = "<group>"; };
+		B5CC10FC213D02C200DD9186 /* CGXFixedTopGeneralMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopGeneralMenuView.m; sourceTree = "<group>"; };
 		D42343D057CECEFFD5D202A1 /* Pods-CGXFixedTopGeneralView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGXFixedTopGeneralView.release.xcconfig"; path = "Pods/Target Support Files/Pods-CGXFixedTopGeneralView/Pods-CGXFixedTopGeneralView.release.xcconfig"; sourceTree = "<group>"; };
 		FBE799EB018F870AAAA3D851 /* libPods-CGXFixedTopGeneralView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CGXFixedTopGeneralView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -86,6 +101,16 @@
 				B56BCB672127E6F5004C069E /* AppDelegate.m */,
 				B56BCB692127E6F5004C069E /* ViewController.h */,
 				B56BCB6A2127E6F5004C069E /* ViewController.m */,
+				B5CC10FB213D02C200DD9186 /* CGXFixedTopGeneralMenuView.h */,
+				B5CC10FC213D02C200DD9186 /* CGXFixedTopGeneralMenuView.m */,
+				B5CC10EF213D023B00DD9186 /* CGXFixedTopGeneralTitleView.h */,
+				B5CC10F0213D023B00DD9186 /* CGXFixedTopGeneralTitleView.m */,
+				B5CC10F2213D025000DD9186 /* CGXFixedTopGeneralTitleManager.h */,
+				B5CC10F3213D025000DD9186 /* CGXFixedTopGeneralTitleManager.m */,
+				B5CC10F5213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.h */,
+				B5CC10F6213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.m */,
+				B5CC10F8213D028100DD9186 /* CGXFixedTopGeneralTitleCell.h */,
+				B5CC10F9213D028100DD9186 /* CGXFixedTopGeneralTitleCell.m */,
 				B56BCB6C2127E6F5004C069E /* Main.storyboard */,
 				B56BCB6F2127E6FB004C069E /* Assets.xcassets */,
 				B56BCB712127E6FB004C069E /* LaunchScreen.storyboard */,
@@ -187,8 +212,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5CC10FA213D028100DD9186 /* CGXFixedTopGeneralTitleCell.m in Sources */,
+				B5CC10F4213D025000DD9186 /* CGXFixedTopGeneralTitleManager.m in Sources */,
+				B5CC10FD213D02C200DD9186 /* CGXFixedTopGeneralMenuView.m in Sources */,
+				B5CC10F1213D023B00DD9186 /* CGXFixedTopGeneralTitleView.m in Sources */,
 				B56BCB6B2127E6F5004C069E /* ViewController.m in Sources */,
 				B56BCB762127E6FB004C069E /* main.m in Sources */,
+				B5CC10F7213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.m in Sources */,
 				B56BCB682127E6F5004C069E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,7 +363,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 424D9G4X35;
 				INFOPLIST_FILE = CGXFixedTopGeneralView/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cgx.work.CGXFixedTopGeneralView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -348,7 +381,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 424D9G4X35;
 				INFOPLIST_FILE = CGXFixedTopGeneralView/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cgx.work.CGXFixedTopGeneralView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
