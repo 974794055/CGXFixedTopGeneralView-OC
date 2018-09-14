@@ -29,15 +29,12 @@
     }
     return self;
 }
-
-
-- (CGXFixedTopGeneralTitleManager *)manager
+- (void)setManager:(CGXFixedTopGeneralTitleManager *)manager
 {
-    if (!_manager) {
-        _manager = [[CGXFixedTopGeneralTitleManager alloc] init];
-    }
-    return _manager;
+    _manager = manager;
+    [self.collectionView reloadData];
 }
+
 
 
 #pragma mark UICollectionView Delegate

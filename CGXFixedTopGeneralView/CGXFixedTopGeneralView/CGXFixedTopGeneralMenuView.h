@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CGXFixedTopGeneralTitleView.h"
 @interface CGXFixedTopGeneralMenuView : UIView
 
 @end
