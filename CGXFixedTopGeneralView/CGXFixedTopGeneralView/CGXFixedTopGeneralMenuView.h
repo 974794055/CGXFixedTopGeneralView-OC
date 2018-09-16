@@ -8,6 +8,25 @@
 
 #import <UIKit/UIKit.h>
 #import "CGXFixedTopGeneralTitleView.h"
+
+@protocol CGXFixedTopGeneralMenuViewDelegate;
+
 @interface CGXFixedTopGeneralMenuView : UIView
+
+@property(nonatomic,weak) id <CGXFixedTopGeneralMenuViewDelegate>delegate;
+
+- (void)updateMenuWithTitleAry:(NSMutableArray *)titleAry VcAry:(NSMutableArray *)vcAry;
+
+- (void)updateMenuWithTitleAry:(NSMutableArray *)titleAry VcAry:(NSMutableArray *)vcAry Manager:(CGXFixedTopGeneralTitleManager *)manager;
+@end
+
+
+
+#pragma mark-------------------TabDelegate-----------------------------
+@protocol CGXFixedTopGeneralMenuViewDelegate <NSObject>
+
+/*点击事件*/
+- (void)selectIndexCGXFixedTopGeneralMenuView:(CGXFixedTopGeneralMenuView *)baseView didSelectIndex:(NSInteger)index;
+
 
 @end

@@ -7,11 +7,33 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CGXFixedTopGeneralTitleCell.h"
+
 #import "CGXFixedTopGeneralTitleManager.h"
+#import "CGXFixedTopGeneralTitleItem.h"
+
+@protocol CGXFixedTopGeneralTitleViewDelegate;
+
 @interface CGXFixedTopGeneralTitleView : UIView<UICollectionViewDelegate,UICollectionViewDataSource>
 
-@property (nonatomic , strong) UICollectionView *collectionView;
-@property (nonatomic , strong) NSMutableArray *dataArray;
-@property (nonatomic , strong) CGXFixedTopGeneralTitleManager *manager;
+
+
+
+@property(nonatomic,weak) id <CGXFixedTopGeneralTitleViewDelegate>delegate;
+
+- (void)updateWithTitleArray:(NSMutableArray *)titleArray Manager:(CGXFixedTopGeneralTitleManager *)manager;
+
+- (void)updateWithTitleArray:(NSMutableArray *)titleArray;
+
+//外界调用 默认选中
+- (void)selectCurrentInterCGXFixedTopGeneralTitleViewWithInter:(NSInteger)inter;
 @end
+
+#pragma mark-------------------TabDelegate-----------------------------
+@protocol CGXFixedTopGeneralTitleViewDelegate <NSObject>
+
+/*点击事件*/
+- (void)selectIndexCGXFixedTopGeneralTitleView:(CGXFixedTopGeneralTitleView *)baseView didSelectIndex:(NSInteger)index;
+
+
+@end
+

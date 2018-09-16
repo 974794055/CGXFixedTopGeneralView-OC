@@ -15,42 +15,34 @@
 {
     self = [super init];
     if (self) {
-        _directionStyle =  CGXCollectionViewGeneralManagerDirectionStyleV;
-        _insets =UIEdgeInsetsMake(10, 10, 10, 10);
-        _minimumLineSpacing = 10;
-        _minimumInteritemSpacing = 10;
-        _collectionViewBGColor = [UIColor colorWithWhite:0.93 alpha:1];
-        _showsVerticalScrollIndicator = NO;
-        _showsHorizontalScrollIndicator = NO;
-        _sectionFootersPinToVisibleBounds = NO;
-        _sectionHeadersPinToVisibleBounds = NO;
-        _headerReferenceSizeH = 0;
-        _footerReferenceSizeH = 10;
-        _headerReferenceBg =[UIColor colorWithWhite:0.93 alpha:1];
-        _footerReferenceBg  =[UIColor colorWithWhite:0.93 alpha:1];
-        _row = 2;
-        _rowHeight = 150;
+        _collectionViewBGColor = [UIColor whiteColor];
+        _titleHeight = 50;
+        _titleSpace = 10;
+        _currentSelected = 0;
+        _isClick = YES;
+        _isFirst = YES;
+        _isUserBtn = NO;
+        _isTopLine = NO;
+         _isBottomLine = YES;
+        _lineBottomHeight = 1.5;
+        _lineBottomColor = [UIColor colorWithWhite:0.93 alpha:1];
         
+        _isTopLine = NO;
+        _lineTopHeight = 1;
+        _lineTopColor = [UIColor colorWithWhite:0.93 alpha:1];
         
-        _registerCellArray = [NSMutableArray array];
+        _isSlider = YES;
+        _isSliderEqual = NO;
+        
+        _sliderColor = [UIColor redColor];
+        _sliderHeight = 2;
+        _sliderWidthScale = 0;
+     
+        
     }
     return self;
 }
 
 
-- (BOOL)isSingle
-{
-    if (!_isSingle) {
-        _isSingle  =YES;
-    }
-    return _isSingle;
-}
-- (BOOL)isAdaptive
-{
-    if (!_isAdaptive) {
-        _isAdaptive = NO;
-    }
-    return _isAdaptive;
-}
 
 @end

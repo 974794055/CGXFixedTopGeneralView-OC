@@ -18,6 +18,13 @@
 		B5CC10F7213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CC10F6213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.m */; };
 		B5CC10FA213D028100DD9186 /* CGXFixedTopGeneralTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CC10F9213D028100DD9186 /* CGXFixedTopGeneralTitleCell.m */; };
 		B5CC10FD213D02C200DD9186 /* CGXFixedTopGeneralMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CC10FC213D02C200DD9186 /* CGXFixedTopGeneralMenuView.m */; };
+		E085CC89214CD1D6000A59A1 /* CGXFixedTopBadgeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E085CC86214CD1D6000A59A1 /* CGXFixedTopBadgeLabel.m */; };
+		E085CC8A214CD1D6000A59A1 /* UIView+CGXFixedTopBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = E085CC88214CD1D6000A59A1 /* UIView+CGXFixedTopBadge.m */; };
+		E085CC8D214CDB8A000A59A1 /* UIButton+CGXFixedTopGeneralTitleAndImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E085CC8C214CDB8A000A59A1 /* UIButton+CGXFixedTopGeneralTitleAndImage.m */; };
+		E085CC90214CE87B000A59A1 /* CGXFixedTopGeneralMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = E085CC8F214CE87B000A59A1 /* CGXFixedTopGeneralMainView.m */; };
+		E085CC93214D58DC000A59A1 /* PagtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E085CC92214D58DC000A59A1 /* PagtViewController.m */; };
+		E085CC96214D5A1F000A59A1 /* PageTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E085CC95214D5A1F000A59A1 /* PageTwoViewController.m */; };
+		E085CC99214D5E74000A59A1 /* PageThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E085CC98214D5E74000A59A1 /* PageThreeViewController.m */; };
 		FC933D83405FAE3FA54A8F2F /* libPods-CGXFixedTopGeneralView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE799EB018F870AAAA3D851 /* libPods-CGXFixedTopGeneralView.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +51,20 @@
 		B5CC10FB213D02C200DD9186 /* CGXFixedTopGeneralMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopGeneralMenuView.h; sourceTree = "<group>"; };
 		B5CC10FC213D02C200DD9186 /* CGXFixedTopGeneralMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopGeneralMenuView.m; sourceTree = "<group>"; };
 		D42343D057CECEFFD5D202A1 /* Pods-CGXFixedTopGeneralView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGXFixedTopGeneralView.release.xcconfig"; path = "Pods/Target Support Files/Pods-CGXFixedTopGeneralView/Pods-CGXFixedTopGeneralView.release.xcconfig"; sourceTree = "<group>"; };
+		E085CC85214CD1D6000A59A1 /* UIView+CGXFixedTopBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CGXFixedTopBadge.h"; sourceTree = "<group>"; };
+		E085CC86214CD1D6000A59A1 /* CGXFixedTopBadgeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopBadgeLabel.m; sourceTree = "<group>"; };
+		E085CC87214CD1D6000A59A1 /* CGXFixedTopBadgeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopBadgeLabel.h; sourceTree = "<group>"; };
+		E085CC88214CD1D6000A59A1 /* UIView+CGXFixedTopBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CGXFixedTopBadge.m"; sourceTree = "<group>"; };
+		E085CC8B214CDB8A000A59A1 /* UIButton+CGXFixedTopGeneralTitleAndImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+CGXFixedTopGeneralTitleAndImage.h"; sourceTree = "<group>"; };
+		E085CC8C214CDB8A000A59A1 /* UIButton+CGXFixedTopGeneralTitleAndImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CGXFixedTopGeneralTitleAndImage.m"; sourceTree = "<group>"; };
+		E085CC8E214CE87B000A59A1 /* CGXFixedTopGeneralMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopGeneralMainView.h; sourceTree = "<group>"; };
+		E085CC8F214CE87B000A59A1 /* CGXFixedTopGeneralMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopGeneralMainView.m; sourceTree = "<group>"; };
+		E085CC91214D58DC000A59A1 /* PagtViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PagtViewController.h; sourceTree = "<group>"; };
+		E085CC92214D58DC000A59A1 /* PagtViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PagtViewController.m; sourceTree = "<group>"; };
+		E085CC94214D5A1F000A59A1 /* PageTwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageTwoViewController.h; sourceTree = "<group>"; };
+		E085CC95214D5A1F000A59A1 /* PageTwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageTwoViewController.m; sourceTree = "<group>"; };
+		E085CC97214D5E74000A59A1 /* PageThreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageThreeViewController.h; sourceTree = "<group>"; };
+		E085CC98214D5E74000A59A1 /* PageThreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageThreeViewController.m; sourceTree = "<group>"; };
 		FBE799EB018F870AAAA3D851 /* libPods-CGXFixedTopGeneralView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CGXFixedTopGeneralView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -105,12 +126,26 @@
 				B5CC10FC213D02C200DD9186 /* CGXFixedTopGeneralMenuView.m */,
 				B5CC10EF213D023B00DD9186 /* CGXFixedTopGeneralTitleView.h */,
 				B5CC10F0213D023B00DD9186 /* CGXFixedTopGeneralTitleView.m */,
+				E085CC8E214CE87B000A59A1 /* CGXFixedTopGeneralMainView.h */,
+				E085CC8F214CE87B000A59A1 /* CGXFixedTopGeneralMainView.m */,
 				B5CC10F2213D025000DD9186 /* CGXFixedTopGeneralTitleManager.h */,
 				B5CC10F3213D025000DD9186 /* CGXFixedTopGeneralTitleManager.m */,
 				B5CC10F5213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.h */,
 				B5CC10F6213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.m */,
 				B5CC10F8213D028100DD9186 /* CGXFixedTopGeneralTitleCell.h */,
 				B5CC10F9213D028100DD9186 /* CGXFixedTopGeneralTitleCell.m */,
+				E085CC87214CD1D6000A59A1 /* CGXFixedTopBadgeLabel.h */,
+				E085CC86214CD1D6000A59A1 /* CGXFixedTopBadgeLabel.m */,
+				E085CC85214CD1D6000A59A1 /* UIView+CGXFixedTopBadge.h */,
+				E085CC88214CD1D6000A59A1 /* UIView+CGXFixedTopBadge.m */,
+				E085CC8B214CDB8A000A59A1 /* UIButton+CGXFixedTopGeneralTitleAndImage.h */,
+				E085CC8C214CDB8A000A59A1 /* UIButton+CGXFixedTopGeneralTitleAndImage.m */,
+				E085CC91214D58DC000A59A1 /* PagtViewController.h */,
+				E085CC92214D58DC000A59A1 /* PagtViewController.m */,
+				E085CC94214D5A1F000A59A1 /* PageTwoViewController.h */,
+				E085CC95214D5A1F000A59A1 /* PageTwoViewController.m */,
+				E085CC97214D5E74000A59A1 /* PageThreeViewController.h */,
+				E085CC98214D5E74000A59A1 /* PageThreeViewController.m */,
 				B56BCB6C2127E6F5004C069E /* Main.storyboard */,
 				B56BCB6F2127E6FB004C069E /* Assets.xcassets */,
 				B56BCB712127E6FB004C069E /* LaunchScreen.storyboard */,
@@ -212,10 +247,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E085CC93214D58DC000A59A1 /* PagtViewController.m in Sources */,
 				B5CC10FA213D028100DD9186 /* CGXFixedTopGeneralTitleCell.m in Sources */,
+				E085CC8A214CD1D6000A59A1 /* UIView+CGXFixedTopBadge.m in Sources */,
 				B5CC10F4213D025000DD9186 /* CGXFixedTopGeneralTitleManager.m in Sources */,
 				B5CC10FD213D02C200DD9186 /* CGXFixedTopGeneralMenuView.m in Sources */,
+				E085CC8D214CDB8A000A59A1 /* UIButton+CGXFixedTopGeneralTitleAndImage.m in Sources */,
+				E085CC96214D5A1F000A59A1 /* PageTwoViewController.m in Sources */,
 				B5CC10F1213D023B00DD9186 /* CGXFixedTopGeneralTitleView.m in Sources */,
+				E085CC99214D5E74000A59A1 /* PageThreeViewController.m in Sources */,
+				E085CC90214CE87B000A59A1 /* CGXFixedTopGeneralMainView.m in Sources */,
+				E085CC89214CD1D6000A59A1 /* CGXFixedTopBadgeLabel.m in Sources */,
 				B56BCB6B2127E6F5004C069E /* ViewController.m in Sources */,
 				B56BCB762127E6FB004C069E /* main.m in Sources */,
 				B5CC10F7213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.m in Sources */,
