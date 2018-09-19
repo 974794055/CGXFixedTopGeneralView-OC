@@ -64,7 +64,6 @@
 }
 - (void)selectIndexCGXFixedTopGeneralTitleView:(CGXFixedTopGeneralTitleView *)baseView didSelectIndex:(NSInteger)index
 {
-    NSLog(@"点击标题  %ld",index);
      [self.mainView selectCurrentInterCGXFixedTopGeneralMainViewWithInter:index];
     if (self.delegate && [self.delegate respondsToSelector:@selector(selectIndexCGXFixedTopGeneralMenuView:didSelectIndex:)]) {
         [self.delegate selectIndexCGXFixedTopGeneralMenuView:self didSelectIndex:index];
@@ -73,7 +72,6 @@
 }
 - (void)selectIndexCGXFixedTopGeneralMainView:(CGXFixedTopGeneralMainView *)baseView Inter:(NSInteger)inter
 {
-     NSLog(@"滚动控制器  %ld",inter);
     [self.titleView selectCurrentInterCGXFixedTopGeneralTitleViewWithInter:inter];
 }
 /*

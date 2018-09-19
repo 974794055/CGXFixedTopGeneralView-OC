@@ -35,6 +35,20 @@
     }
     return _titleSelectColor;
 }
+- (NSAttributedString *)titleNormalAttributed
+{
+    if (!_titleNormalAttributed) {
+        _titleNormalAttributed = [[NSAttributedString alloc] initWithString:@""];
+    }
+    return _titleNormalAttributed;
+}
+- (NSAttributedString *)titleSelectAttributed
+{
+    if (!_titleSelectAttributed) {
+        _titleSelectAttributed = [[NSAttributedString alloc] initWithString:@""];
+    }
+    return _titleSelectAttributed;
+}
 
 - (BOOL)isSelect
 {

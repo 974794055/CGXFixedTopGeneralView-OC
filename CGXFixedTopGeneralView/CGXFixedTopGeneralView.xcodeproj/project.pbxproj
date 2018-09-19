@@ -134,12 +134,7 @@
 				B5CC10F6213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.m */,
 				B5CC10F8213D028100DD9186 /* CGXFixedTopGeneralTitleCell.h */,
 				B5CC10F9213D028100DD9186 /* CGXFixedTopGeneralTitleCell.m */,
-				E085CC87214CD1D6000A59A1 /* CGXFixedTopBadgeLabel.h */,
-				E085CC86214CD1D6000A59A1 /* CGXFixedTopBadgeLabel.m */,
-				E085CC85214CD1D6000A59A1 /* UIView+CGXFixedTopBadge.h */,
-				E085CC88214CD1D6000A59A1 /* UIView+CGXFixedTopBadge.m */,
-				E085CC8B214CDB8A000A59A1 /* UIButton+CGXFixedTopGeneralTitleAndImage.h */,
-				E085CC8C214CDB8A000A59A1 /* UIButton+CGXFixedTopGeneralTitleAndImage.m */,
+				E066DF8221528FB50077421A /* Framework */,
 				E085CC91214D58DC000A59A1 /* PagtViewController.h */,
 				E085CC92214D58DC000A59A1 /* PagtViewController.m */,
 				E085CC94214D5A1F000A59A1 /* PageTwoViewController.h */,
@@ -153,6 +148,19 @@
 				B56BCB752127E6FB004C069E /* main.m */,
 			);
 			path = CGXFixedTopGeneralView;
+			sourceTree = "<group>";
+		};
+		E066DF8221528FB50077421A /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				E085CC87214CD1D6000A59A1 /* CGXFixedTopBadgeLabel.h */,
+				E085CC86214CD1D6000A59A1 /* CGXFixedTopBadgeLabel.m */,
+				E085CC85214CD1D6000A59A1 /* UIView+CGXFixedTopBadge.h */,
+				E085CC88214CD1D6000A59A1 /* UIView+CGXFixedTopBadge.m */,
+				E085CC8B214CDB8A000A59A1 /* UIButton+CGXFixedTopGeneralTitleAndImage.h */,
+				E085CC8C214CDB8A000A59A1 /* UIButton+CGXFixedTopGeneralTitleAndImage.m */,
+			);
+			path = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

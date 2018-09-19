@@ -8,8 +8,8 @@
 
 #import "PagtViewController.h"
 
-@interface PagtViewController ()
-
+@interface PagtViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic , strong) UITableView *tableView;
 @end
 
 @implementation PagtViewController
@@ -20,9 +20,45 @@
     
     NSLog(@"PagtViewController：%ld",self.inter);
     
-    UILabel *ll = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 100, 40)];
-    [self.view addSubview:ll];
-    ll.text = [NSString stringWithFormat:@"%ld",self.inter];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-88-83-60) style:UITableViewStyleGrouped];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.view addSubview:self.tableView];
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 30;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 0.01;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 0.01;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 0.01)];
+    
+    return v;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 0.01)];
+    
+    return v;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)self.inter];
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning {

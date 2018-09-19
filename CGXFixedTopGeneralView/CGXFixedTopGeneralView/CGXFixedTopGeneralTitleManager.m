@@ -16,7 +16,7 @@
     self = [super init];
     if (self) {
         _collectionViewBGColor = [UIColor whiteColor];
-        _titleHeight = 50;
+        _titleHeight = 60;
         _titleSpace = 10;
         _currentSelected = 0;
         _isClick = YES;

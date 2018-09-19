@@ -53,18 +53,22 @@
 }
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    if (scrollView == self.mainScrollView){
-        NSInteger inter = scrollView.contentOffset.x / CGRectGetWidth(self.bounds);
-        if (self.delegate && [self.delegate respondsToSelector:@selector(selectIndexCGXFixedTopGeneralMainView:Inter:)]){
-            [self.delegate selectIndexCGXFixedTopGeneralMainView:self Inter:inter];
+    if (scrollView.contentOffset.x>0) {
+        if (scrollView == self.mainScrollView){
+            NSInteger inter = scrollView.contentOffset.x / CGRectGetWidth(self.bounds);
+            if (self.delegate && [self.delegate respondsToSelector:@selector(selectIndexCGXFixedTopGeneralMainView:Inter:)]){
+                [self.delegate selectIndexCGXFixedTopGeneralMainView:self Inter:inter];
+            }
         }
     }
 }
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
 {
-    NSInteger inter = scrollView.contentOffset.x / CGRectGetWidth(self.bounds);
-    if (self.delegate && [self.delegate respondsToSelector:@selector(selectIndexCGXFixedTopGeneralMainView:Inter:)]){
-        [self.delegate selectIndexCGXFixedTopGeneralMainView:self Inter:inter];
+    if (scrollView.contentOffset.x>0) {
+        NSInteger inter = scrollView.contentOffset.x / CGRectGetWidth(self.bounds);
+        if (self.delegate && [self.delegate respondsToSelector:@selector(selectIndexCGXFixedTopGeneralMainView:Inter:)]){
+            [self.delegate selectIndexCGXFixedTopGeneralMainView:self Inter:inter];
+        }
     }
 }
 - (void)configSubview

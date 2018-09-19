@@ -95,8 +95,7 @@
 - (void)updateWithTitleArray:(NSMutableArray *)titleArray Manager:(CGXFixedTopGeneralTitleManager *)manager
 {
     self.manager = manager;
-    self.titleArray = titleArray;
-    [self updateM];
+    [self updateWithTitleArray:titleArray];
 }
 
 - (void)updateWithTitleArray:(NSMutableArray *)titleArray

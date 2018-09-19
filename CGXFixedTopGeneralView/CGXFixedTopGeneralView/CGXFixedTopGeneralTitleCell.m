@@ -58,67 +58,54 @@
         [self.titleBtn setTitle:title forState:UIControlStateNormal];
         [self.titleBtn setTitle:title forState:UIControlStateSelected];
         [self.titleBtn setTitleColor:item.titleNormalColor forState:UIControlStateNormal];
-         [self.titleBtn setTitleColor:item.titleSelectColor forState:UIControlStateSelected];
-//        titleBtn.setTitleColor(UIColor.orange, for: [.highlighted, .selected])
-
-        if (item.buttonMode == CGXFixedTopGeneralTitleItemDone) {
-
-        } else {
-        
-            NSString * normalImage = item.normalImage;
-            NSString * selectImage = item.selectImage;
-            if ([normalImage length]> 0){
-                [self.titleBtn setImage:[UIImage imageNamed:item.normalImage] forState:UIControlStateNormal];
-      
-               if ([selectImage length]> 0){
-                    [self.titleBtn setImage:[UIImage imageNamed:item.selectImage] forState:UIControlStateSelected];
-                } else{
-                     [self.titleBtn setImage:[UIImage imageNamed:item.normalImage] forState:UIControlStateSelected];
-                }
-                [self updateInfoButtonModeWithMode:item.buttonMode Space:item.space];
-            }
+        [self.titleBtn setTitleColor:item.titleSelectColor forState:UIControlStateSelected];
+        if (item.buttonMode != CGXFixedTopGeneralTitleItemDone) {
+            [self showCellImageModel:item];
         }
     } else {
         NSAttributedString *titleNormalAttributed = item.titleNormalAttributed;
         NSAttributedString *titleSelectAttributed = item.titleSelectAttributed;
-        if (item.buttonMode == CGXFixedTopGeneralTitleItemDone) {
-            [self.titleBtn setAttributedTitle:titleNormalAttributed forState:UIControlStateNormal];
-            if ([titleSelectAttributed length] == 0) {
-                  [self.titleBtn setAttributedTitle:titleNormalAttributed forState:UIControlStateSelected];
-            }else{
-                  [self.titleBtn setAttributedTitle:titleSelectAttributed forState:UIControlStateSelected];
-            }
-        } else{
-            [self.titleBtn setAttributedTitle:titleNormalAttributed forState:UIControlStateNormal];
-            if ([titleSelectAttributed length] == 0) {
-                [self.titleBtn setAttributedTitle:titleNormalAttributed forState:UIControlStateSelected];
-            }else{
-                [self.titleBtn setAttributedTitle:titleSelectAttributed forState:UIControlStateSelected];
-            }
-            NSString *normalImage = item.normalImage;
-            NSString * selectImage = item.selectImage;
-            if ([normalImage length] > 0){
-                [self.titleBtn setImage:[UIImage imageNamed:item.normalImage] forState:UIControlStateNormal];
-                
-                if ([selectImage length]> 0){
-                    [self.titleBtn setImage:[UIImage imageNamed:item.selectImage] forState:UIControlStateSelected];
-                } else{
-                    [self.titleBtn setImage:[UIImage imageNamed:item.normalImage] forState:UIControlStateSelected];
-                }
-                [self updateInfoButtonModeWithMode:item.buttonMode Space:item.space];
-            }
-        
+        [self.titleBtn setAttributedTitle:titleNormalAttributed forState:UIControlStateNormal];
+        if ([titleSelectAttributed length] == 0) {
+            [self.titleBtn setAttributedTitle:titleNormalAttributed forState:UIControlStateSelected];
+        }else{
+            [self.titleBtn setAttributedTitle:titleSelectAttributed forState:UIControlStateSelected];
+        }
+        if (item.buttonMode != CGXFixedTopGeneralTitleItemDone) {
+            [self showCellImageModel:item];
         }
     }
+    [self.titleBtn pp_setBadgeLabelAttributes:^(CGXFixedTopBadgeLabel *badgeLabel) {
+        badgeLabel.p_width = 100 ;
+        badgeLabel.p_right = 0;
+    }];
     if (item.badge > 0) {
-         [self.titleBtn pp_addBadgeWithText:[NSString stringWithFormat:@"%ld",item.badge]];
+        [self.titleBtn pp_addBadgeWithText:[NSString stringWithFormat:@"%ld",item.badge]];
         [self.titleBtn pp_moveBadgeWithX:item.badgeX Y:item.badgeY];
         [self.titleBtn pp_showBadge];
+//        self.titleBtn.p_width = 100;
+        
 
+        
     } else{
         [self.titleBtn pp_hiddenBadge];
     }
     self.titleBtn.selected = item.isSelect;
+}
+
+- (void)showCellImageModel:(CGXFixedTopGeneralTitleItem *)item
+{
+    NSString *normalImage = item.normalImage;
+    NSString * selectImage = item.selectImage;
+    if ([normalImage length] > 0){
+        [self.titleBtn setImage:[UIImage imageNamed:item.normalImage] forState:UIControlStateNormal];
+        if ([selectImage length]> 0){
+            [self.titleBtn setImage:[UIImage imageNamed:item.selectImage] forState:UIControlStateSelected];
+        } else{
+            [self.titleBtn setImage:[UIImage imageNamed:item.normalImage] forState:UIControlStateSelected];
+        }
+        [self updateInfoButtonModeWithMode:item.buttonMode Space:item.space];
+    }
 }
 - (void)updateInfoButtonModeWithMode:(CGXFixedTopGeneralTitleItemButtonMode)mode Space:(CGFloat)space
 {
