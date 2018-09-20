@@ -35,7 +35,7 @@
         _isSliderEqual = NO;
         
         _sliderColor = [UIColor redColor];
-        _sliderHeight = 2;
+        _sliderHeight = 3;
         _sliderWidthScale = 0;
      
         

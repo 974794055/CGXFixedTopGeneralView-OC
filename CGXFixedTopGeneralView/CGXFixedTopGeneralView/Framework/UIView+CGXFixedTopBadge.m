@@ -55,10 +55,23 @@ static NSString *const kBadgeLabel = @"kBadgeLabel";
     
     self.badgeLabel.p_y = -self.badgeLabel.p_height*0.5/*badge的y坐标*/ + y;
     
-//    self.badgeLabel.p_right = self.badgeLabel.superview.p_width + self.badgeLabel.p_height*0.5 + x;
-    self.badgeLabel.p_x = (self.p_width - self.badgeLabel.p_height*0.5)/*badge的x坐标*/ + x;
+    switch (self.badgeLabel.flexMode) {
+        case CGXFixedTopBadgeLabelFlexModeHead: // 1. 左伸缩  <==●
+            self.badgeLabel.p_right = self.badgeLabel.superview.p_width + self.badgeLabel.p_height*0.5 + x;
+            break;
+        case CGXFixedTopBadgeLabelFlexModeTail: // 2. 右伸缩 ●==>
+            self.badgeLabel.p_x = (self.p_width - self.badgeLabel.p_height*0.5)/*badge的x坐标*/ + x;
+            break;
+        case CGXFixedTopBadgeLabelFlexModeMiddle: // 3. 左右伸缩  <=●=>
+            self.badgeLabel.center = CGPointMake(self.p_width+x, y);
+            break;
+    }
 }
-
+- (void)pp_setBadgeFlexMode:(CGXFixedTopBadgeLabelFlexMode)flexMode
+{
+    self.badgeLabel.flexMode = flexMode;
+    [self pp_moveBadgeWithX:self.badgeLabel.offset.x Y:self.badgeLabel.offset.y];
+}
 
 - (void)pp_setBadgeLabelAttributes:(void (^)(CGXFixedTopBadgeLabel *))badgeLabel
 {

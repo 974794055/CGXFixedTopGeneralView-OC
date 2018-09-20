@@ -19,13 +19,16 @@
 
 
 @property(nonatomic,weak) id <CGXFixedTopGeneralTitleViewDelegate>delegate;
+//更新数据源 配置
 
-- (void)updateWithTitleArray:(NSMutableArray *)titleArray Manager:(CGXFixedTopGeneralTitleManager *)manager;
-
-- (void)updateWithTitleArray:(NSMutableArray *)titleArray;
+- (void)updateWithTitleArray:(NSMutableArray<CGXFixedTopGeneralTitleItem *> *)titleArray Manager:(CGXFixedTopGeneralTitleManager *)manager;
+- (void)updateWithTitleArray:(NSMutableArray<CGXFixedTopGeneralTitleItem *> *)titleArray;
 
 //外界调用 默认选中
 - (void)selectCurrentInterCGXFixedTopGeneralTitleViewWithInter:(NSInteger)inter;
+
+//更新角标
+- (void)updateBadgeTitleWithBadge:(NSInteger)badge Inter:(NSInteger)inter;
 @end
 
 #pragma mark-------------------TabDelegate-----------------------------

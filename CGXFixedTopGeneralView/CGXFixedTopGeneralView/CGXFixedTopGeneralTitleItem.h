@@ -17,6 +17,13 @@ typedef NS_ENUM(NSInteger, CGXFixedTopGeneralTitleItemButtonMode) {
     CGXFixedTopGeneralTitleItemRight
 };
 
+
+typedef NS_ENUM(NSUInteger, CGXFixedTopGeneralTitleItemFlexMode) {
+    CGXFixedTopGeneralTitleItemFlexModeHead,    // 左伸缩 Head Flex    : <==●
+    CGXFixedTopGeneralTitleItemFlexModeTail,    // 右伸缩 Tail Flex    : ●==>
+    CGXFixedTopGeneralTitleItemFlexModeMiddle   // 左右伸缩 Middle Flex : <=●=>
+};
+
 @interface CGXFixedTopGeneralTitleItem : NSObject
 
 
@@ -52,10 +59,21 @@ typedef NS_ENUM(NSInteger, CGXFixedTopGeneralTitleItemButtonMode) {
 @property (nonatomic , assign) NSInteger badge;
 @property (nonatomic , assign) CGFloat badgeX;
 @property (nonatomic , assign) CGFloat badgeY;
-
-
+//角标最大显示999
+@property (nonatomic , assign) CGFloat badgePage;
+//默认红色
+@property (nonatomic , strong) UIColor *badgeTitleColor;
+//默认红色
+@property (nonatomic , strong) UIFont *badgeFont;
+//默认红色
+@property (nonatomic , strong) UIColor *badgeBGColor;
+//角标方向
+@property (nonatomic , assign) CGXFixedTopGeneralTitleItemFlexMode badgeFlexMode;
 //图文间距
 @property (nonatomic , assign) CGFloat space;
+
+//字体方法。默认 1.0
+@property (nonatomic , assign) CGFloat titleMaxScale;
 
 //按钮默认点击动画效果
 @property (nonatomic , assign) BOOL adjustsImageWhenDisabled;

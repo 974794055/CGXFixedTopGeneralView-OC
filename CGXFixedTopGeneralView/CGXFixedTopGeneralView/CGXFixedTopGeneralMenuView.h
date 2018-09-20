@@ -18,6 +18,9 @@
 - (void)updateMenuWithTitleAry:(NSMutableArray *)titleAry VcAry:(NSMutableArray *)vcAry;
 
 - (void)updateMenuWithTitleAry:(NSMutableArray *)titleAry VcAry:(NSMutableArray *)vcAry Manager:(CGXFixedTopGeneralTitleManager *)manager;
+
+//更新角标
+- (void)updateBadgeTitleWithBadge:(NSInteger)badge Inter:(NSInteger)inter;
 @end
 
 

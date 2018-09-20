@@ -66,6 +66,7 @@
     // 4. 赋值
     self.titleEdgeInsets = labelEdgeInsets;
     self.imageEdgeInsets = imageEdgeInsets;
+
   
 }
 

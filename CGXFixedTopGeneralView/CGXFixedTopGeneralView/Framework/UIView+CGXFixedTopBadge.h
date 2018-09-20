@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class CGXFixedTopBadgeLabel;
-
+typedef NS_ENUM(NSUInteger, CGXFixedTopBadgeLabelFlexMode);
 #pragma mark - Protocol
 
 @protocol CGXFixedTopBadge <NSObject>
@@ -52,6 +52,19 @@
  @param y Y轴偏移量 (y<0: 上移, y>0: 下移) axis offset ( Y <0: up, y> 0: down)
  */
 - (void)pp_moveBadgeWithX:(CGFloat)x Y:(CGFloat)y;
+
+/**
+ 设置Badge伸缩的方向
+ 
+ Setting the direction of Badge expansion
+ 
+ PPBadgeViewFlexModeHead,    左伸缩 Head Flex    : <==●
+ PPBadgeViewFlexModeTail,    右伸缩 Tail Flex    : ●==>
+ PPBadgeViewFlexModeMiddle   左右伸缩 Middle Flex : <=●=>
+ 
+ @param flexMode : Default is PPBadgeViewFlexModeTail
+ */
+- (void)pp_setBadgeFlexMode:(CGXFixedTopBadgeLabelFlexMode)flexMode;
 
 /**
  设置Bage的属性

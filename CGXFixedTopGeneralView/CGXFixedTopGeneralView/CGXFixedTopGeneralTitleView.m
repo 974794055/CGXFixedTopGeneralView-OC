@@ -12,7 +12,7 @@
 
 @property (nonatomic , strong) CGXFixedTopGeneralTitleManager *manager;
 @property (nonatomic , strong) UICollectionView *collectionView;
-@property (nonatomic , strong) NSMutableArray *titleArray;
+@property (nonatomic , strong) NSMutableArray<CGXFixedTopGeneralTitleItem *> *titleArray;
 
 @property (nonatomic , strong) UIView *topLineView;
 @property (nonatomic , strong) UIView *bottomLineView;
@@ -92,16 +92,27 @@
     _manager = manager;
 }
 
-- (void)updateWithTitleArray:(NSMutableArray *)titleArray Manager:(CGXFixedTopGeneralTitleManager *)manager
+- (void)updateWithTitleArray:(NSMutableArray<CGXFixedTopGeneralTitleItem *> *)titleArray Manager:(CGXFixedTopGeneralTitleManager *)manager
 {
     self.manager = manager;
     [self updateWithTitleArray:titleArray];
 }
 
-- (void)updateWithTitleArray:(NSMutableArray *)titleArray
+- (void)updateWithTitleArray:(NSMutableArray<CGXFixedTopGeneralTitleItem *> *)titleArray
 {
     self.titleArray = titleArray;
     [self updateM];
+}
+//更新角标
+- (void)updateBadgeTitleWithBadge:(NSInteger)badge Inter:(NSInteger)inter
+{
+    if (self.titleArray.count>inter) {
+         CGXFixedTopGeneralTitleItem *item = self.titleArray[inter];
+        item.badge = badge;
+        [self.titleArray replaceObjectAtIndex:inter withObject:item];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:inter inSection:0];
+        [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+    }
 }
 - (void)updateM
 {

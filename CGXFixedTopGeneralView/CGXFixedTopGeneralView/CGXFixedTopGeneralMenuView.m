@@ -52,15 +52,21 @@
     return _manager;
 }
 
-- (void)updateMenuWithTitleAry:(NSMutableArray *)titleAry VcAry:(NSMutableArray *)vcAry
+- (void)updateMenuWithTitleAry:(NSMutableArray<CGXFixedTopGeneralTitleItem *> *)titleAry VcAry:(NSMutableArray *)vcAry
 {
     [self.titleView updateWithTitleArray:titleAry Manager:self.manager];
     [self.mainView loadMainVC:vcAry];
 }
-- (void)updateMenuWithTitleAry:(NSMutableArray *)titleAry VcAry:(NSMutableArray *)vcAry Manager:(CGXFixedTopGeneralTitleManager *)manager
+- (void)updateMenuWithTitleAry:(NSMutableArray<CGXFixedTopGeneralTitleItem *> *)titleAry VcAry:(NSMutableArray *)vcAry Manager:(CGXFixedTopGeneralTitleManager *)manager
 {
     [self.titleView updateWithTitleArray:titleAry Manager:manager];
     [self.mainView loadMainVC:vcAry];
+}
+
+//更新角标
+- (void)updateBadgeTitleWithBadge:(NSInteger)badge Inter:(NSInteger)inter
+{
+    [self.titleView updateBadgeTitleWithBadge:badge Inter:inter];
 }
 - (void)selectIndexCGXFixedTopGeneralTitleView:(CGXFixedTopGeneralTitleView *)baseView didSelectIndex:(NSInteger)index
 {

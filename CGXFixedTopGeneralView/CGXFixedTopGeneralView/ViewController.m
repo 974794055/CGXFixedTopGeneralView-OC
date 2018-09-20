@@ -21,6 +21,7 @@
     CGXFixedTopGeneralMenuView *menuView;
     CGXFixedTopGeneralTitleManager *manager;
     NSMutableArray *vcArr;
+    NSInteger page;
 }
 @end
 
@@ -28,6 +29,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    page = 10;
+    
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor whiteColor];
     menuView = [[CGXFixedTopGeneralMenuView alloc] initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, self.view.frame.size.height-88-83)];;
@@ -38,8 +42,8 @@
     
     
     NSArray *titleArr = @[@"全部",@"代支付",@"已发货",@"已取消",@"已完成"];
-    NSArray * nomArr = @[@"me_setting_store",@"me_setting_store",@"me_setting_store",@"me_setting_store",@"me_setting_store"];
-    NSArray * selectArr = @[@"me_setting_union",@"me_setting_union",@"me_setting_union",@"me_setting_union",@"me_setting_union"];
+    NSArray * nomArr = @[@"me_setting_store",@"me_setting_store",@"me_setting_store",@"me_setting_store",@"ic_tabbar_explore"];
+    NSArray * selectArr = @[@"me_setting_union",@"me_setting_union",@"me_setting_union",@"me_setting_union",@"ic_tabbar_explore"];
    
     vcArr = [NSMutableArray array];
 
@@ -71,6 +75,7 @@
         item.title = titleArr[i];
         item.normalImage = nomArr[i];
         item.selectImage = selectArr[i];
+        item.space = 10;
         if (i == 0) {
             item.badge = 3000000;
         }
@@ -111,6 +116,9 @@
 - (void)selectIndexCGXFixedTopGeneralMenuView:(CGXFixedTopGeneralMenuView *)baseView didSelectIndex:(NSInteger)index
 {
     NSLog(@"选择了：%ld",index);
+    
+    page++;
+    [menuView updateBadgeTitleWithBadge:page Inter:index];
     if (index == 0) {
         PagtViewController *vc =vcArr[index];
 

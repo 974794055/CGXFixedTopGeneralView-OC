@@ -67,7 +67,7 @@
 - (CGFloat)badgeX
 {
     if (!_badgeX) {
-        _badgeX = -20;
+        _badgeX = -25;
     }
     return _badgeX;
 }
@@ -77,6 +77,48 @@
         _badgeY = 10;
     }
     return _badgeY;
+}
+- (CGFloat)badgePage
+{
+    if (!_badgePage) {
+        _badgePage = 999;
+    }
+    return _badgePage;
+}
+- (CGFloat)titleMaxScale
+{
+    if (!_titleMaxScale) {
+        _titleMaxScale = 1.0;
+    }
+    return _titleMaxScale;
+}
+- (UIColor *)badgeBGColor
+{
+    if (!_badgeBGColor) {
+        _badgeBGColor = [UIColor redColor];
+    }
+    return _badgeBGColor;
+}
+- (UIColor *)badgeTitleColor
+{
+    if (!_badgeTitleColor) {
+        _badgeTitleColor = [UIColor whiteColor];
+    }
+    return _badgeTitleColor;
+}
+- (UIFont *)badgeFont
+{
+    if (!_badgeFont) {
+        _badgeFont = [UIFont systemFontOfSize:12];
+    }
+    return _badgeFont;
+}
+- (CGXFixedTopGeneralTitleItemFlexMode)badgeFlexMode
+{
+    if (!_badgeFlexMode) {
+        _badgeFlexMode = CGXFixedTopGeneralTitleItemFlexModeTail;
+    }
+    return _badgeFlexMode;
 }
 - (CGFloat)space
 {
