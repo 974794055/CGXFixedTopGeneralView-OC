@@ -18,11 +18,23 @@
 
 @implementation CGXFixedTopGeneralMenuView
 
+- (UIViewController*)viewController:(UIView *)view {
+    for (UIView* next = [view superview]; next; next = next.superview) {
+        UIResponder* nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UINavigationController class]] || [nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController*)nextResponder;
+        }
+    }
+    return nil;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
        
+        [self viewController:self].edgesForExtendedLayout = UIRectEdgeNone;
+        
     }
     return self;
 }

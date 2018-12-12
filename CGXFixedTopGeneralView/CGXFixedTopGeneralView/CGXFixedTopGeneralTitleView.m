@@ -192,7 +192,7 @@
 #pragma mark - 返回每个分区的个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 5;
+    return self.titleArray.count;
 }
 - (NSMutableArray *)titleArray
 {

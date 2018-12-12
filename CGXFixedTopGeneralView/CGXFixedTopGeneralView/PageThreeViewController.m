@@ -17,12 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-     NSLog(@"PageThreeViewController：%ld",self.inter);
+    
     UILabel *ll = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 100, 40)];
     [self.view addSubview:ll];
     ll.text = [NSString stringWithFormat:@"%ld",self.inter];
 }
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"PagtViewController：%ld",self.inter);
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
