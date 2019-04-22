@@ -7,6 +7,7 @@
 //
 
 #import "CGXFixedTopGeneralMainView.h"
+#import <objc/runtime.h>
 @interface CGXFixedTopGeneralMainView()<UIScrollViewDelegate>
 
 @property (nonatomic , strong) UIScrollView *mainScrollView;
@@ -77,6 +78,24 @@
         [self.mainScrollView addSubview:vc.view];
     }
     self.mainScrollView.contentSize =  CGSizeMake(self.mainScrollView.bounds.size.width * self.vcArray.count,  self.mainScrollView.bounds.size.height);
+}
+- (id)createForClass:(NSString *)name
+{
+    const char *className = [name cStringUsingEncoding:NSASCIIStringEncoding];
+    // 从一个字串返回一个类
+    Class newClass = objc_getClass(className);
+    if (!newClass)
+    {
+        // 创建一个类
+        Class superClass = [NSObject class];
+        newClass = objc_allocateClassPair(superClass, className, 0);
+        // 注册你创建的这个类
+        objc_registerClassPair(newClass);
+    }
+    // 创建对象
+    id instance = [[newClass alloc] init];
+    
+    return instance;
 }
 - (UIViewController*)viewController:(UIView *)view {
     for (UIView* next = [view superview]; next; next = next.superview) {
