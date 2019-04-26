@@ -2,7 +2,8 @@
 //  CGXFixedTopGeneralTitleCell.m
 //  CGXFixedTopGeneralView
 //
-//  Created by 曹贵鑫 on 2018/9/3.
+//  Created by 曹贵鑫 on 2018/8/8.
+//  git下载链接：https://github.com/974794055/CGXFixedTopGeneralView-OC.git
 //  Copyright © 2018年 曹贵鑫. All rights reserved.
 //
 
@@ -26,8 +27,7 @@
         self.titleBtn.imageView.clipsToBounds  = YES;
         [self.titleBtn setContentMode:UIViewContentModeScaleAspectFill];
         self.titleBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
-        //        self.titleBtn.imageView.contentMode = UIViewContentModeCenter;
-        //        self.titleBtn.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        self.titleBtn.imageView.contentMode = UIViewContentModeScaleAspectFit;
         [self.titleBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [self.titleBtn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
          [self.titleBtn setTitleColor:[UIColor redColor] forState:UIControlStateSelected | UIControlStateHighlighted];

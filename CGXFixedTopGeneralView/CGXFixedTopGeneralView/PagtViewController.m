@@ -3,12 +3,11 @@
 //  CGXFixedTopGeneralView
 //
 //  Created by 曹贵鑫 on 2018/9/15.
+//  git下载链接：https://github.com/974794055/CGXFixedTopGeneralView-OC.git
 //  Copyright © 2018年 曹贵鑫. All rights reserved.
 //
 
 #import "PagtViewController.h"
-#import "PageTwoViewController.h"
-
 @interface PagtViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic , strong) UITableView *tableView;
 @end
@@ -68,9 +67,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PageTwoViewController *v = [PageTwoViewController new];
-    v.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:v animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {

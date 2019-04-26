@@ -2,7 +2,8 @@
 //  CGXFixedTopGeneralTitleItem.m
 //  CGXFixedTopGeneralView
 //
-//  Created by 曹贵鑫 on 2018/9/3.
+//  Created by 曹贵鑫 on 2018/8/8.
+//  git下载链接：https://github.com/974794055/CGXFixedTopGeneralView-OC.git
 //  Copyright © 2018年 曹贵鑫. All rights reserved.
 //
 
@@ -13,7 +14,16 @@
 {
     
 }
-
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        if (self.titleNormalAttributed) {
+//            self.title = @"";
+        }
+    }
+    return self;
+}
 - (UIFont *)titleNormalFont
 {
     if (!_titleNormalFont) {
@@ -39,6 +49,7 @@
 {
     if (!_titleNormalAttributed) {
         _titleNormalAttributed = [[NSAttributedString alloc] initWithString:@""];
+        self.title = @"";
     }
     return _titleNormalAttributed;
 }

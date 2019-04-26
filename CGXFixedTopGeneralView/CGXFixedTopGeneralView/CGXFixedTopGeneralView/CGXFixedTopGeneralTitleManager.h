@@ -2,27 +2,15 @@
 //  CGXFixedTopGeneralTitleManager.h
 //  CGXFixedTopGeneralView
 //
-//  Created by 曹贵鑫 on 2018/9/3.
+//  Created by 曹贵鑫 on 2018/8/8.
+//  git下载链接：https://github.com/974794055/CGXFixedTopGeneralView-OC.git
 //  Copyright © 2018年 曹贵鑫. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-////不规则的布局   默认都是垂直方向有效
-////横向热门品牌菜单 默认水平方向有效
-//typedef NS_ENUM(NSInteger, CGXCollectionViewGeneralManagerDirectionStyle) {
-//    CGXCollectionViewGeneralManagerDirectionStyleV,  //垂直方向
-//    CGXCollectionViewGeneralManagerDirectionStyleH,  //水平方向
-//};
 
 @interface CGXFixedTopGeneralTitleManager : NSObject
-
-
-/**
- 展示方向
- **/
-//@property (nonatomic ,assign) CGXCollectionViewGeneralManagerDirectionStyle directionStyle;
-
 
 @property (nonatomic , strong) UIColor *collectionViewBGColor;//collectionview背景颜色
 //标签高度 默认为50
