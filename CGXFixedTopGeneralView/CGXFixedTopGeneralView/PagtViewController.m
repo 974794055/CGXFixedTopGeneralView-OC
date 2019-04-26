@@ -7,6 +7,7 @@
 //
 
 #import "PagtViewController.h"
+#import "PageTwoViewController.h"
 
 @interface PagtViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic , strong) UITableView *tableView;
@@ -18,13 +19,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSLog(@"PagtViewController：%ld",self.inter);
-    
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-88-83-60) style:UITableViewStyleGrouped];
+   
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:self.tableView];
+}
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"PagtViewController：%ld",self.inter);
+    
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -57,8 +63,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)self.inter];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
     return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    PageTwoViewController *v = [PageTwoViewController new];
+    v.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:v animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

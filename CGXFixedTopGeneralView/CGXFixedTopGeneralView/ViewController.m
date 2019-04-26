@@ -32,9 +32,10 @@
     
     page = 10;
     
+     self.edgesForExtendedLayout = UIRectEdgeNone;
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor whiteColor];
-    menuView = [[CGXFixedTopGeneralMenuView alloc] initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, self.view.frame.size.height-88-83)];;
+    menuView = [[CGXFixedTopGeneralMenuView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-64-49)];;
     menuView.delegate = self;
     menuView.backgroundColor = [UIColor lightGrayColor];
     
@@ -55,18 +56,18 @@
             PagtViewController *vc =[PagtViewController new];
             vc.view.backgroundColor = randomColor;
             vc.inter = i;
-            vc.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-64-49);
+//            vc.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-64-49);
             [vcArr addObject:vc];
         } else if (i == 1){
             PageTwoViewController *vc =[PageTwoViewController new];
             vc.view.backgroundColor = randomColor;
-            vc.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-64-49);
+//            vc.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-64-49);
             vc.inter = i;
             [vcArr addObject:vc];
         } else{
             PageThreeViewController *vc =[PageThreeViewController new];
             vc.view.backgroundColor = randomColor;
-            vc.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-64-49);
+//            vc.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-64-49);
             vc.inter = i;
             [vcArr addObject:vc];
         }
@@ -119,20 +120,20 @@
     
     page++;
     [menuView updateBadgeTitleWithBadge:page Inter:index];
-    if (index == 0) {
-        PagtViewController *vc =vcArr[index];
-
-        vc.inter = index;
-      
-    } else if (index == 1){
-        PageTwoViewController *vc =vcArr[index];
-      
-        vc.inter = index;
-     
-    } else{
-        PageThreeViewController *vc =vcArr[index];
-        vc.inter = index;
-    }
+//    if (index == 0) {
+//        PagtViewController *vc =vcArr[index];
+//
+//        vc.inter = index;
+//
+//    } else if (index == 1){
+//        PageTwoViewController *vc =vcArr[index];
+//
+//        vc.inter = index;
+//
+//    } else{
+//        PageThreeViewController *vc =vcArr[index];
+//        vc.inter = index;
+//    }
     
 }
 - (void)didReceiveMemoryWarning {
