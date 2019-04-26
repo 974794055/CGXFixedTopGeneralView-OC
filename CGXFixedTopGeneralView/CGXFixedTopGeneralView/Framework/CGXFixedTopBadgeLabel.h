@@ -1,9 +1,9 @@
 //
-//  PPBadgeLabel.h
-//  PPBadgeViewObjc
+//  CGXFixedTopBadgeLabel.h
+//  CGXFixedTopGeneralView
 //
-//  Created by AndyPang on 2017/6/17.
-//  Copyright © 2017年 AndyPang. All rights reserved.
+//  Created by 曹贵鑫 on 2018/8/18.
+//  Copyright © 2018年 曹贵鑫. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
