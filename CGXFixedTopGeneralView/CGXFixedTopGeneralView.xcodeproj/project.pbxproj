@@ -81,15 +81,11 @@
 				B5CC10FC213D02C200DD9186 /* CGXFixedTopGeneralMenuView.m */,
 				B5CC10EF213D023B00DD9186 /* CGXFixedTopGeneralTitleView.h */,
 				B5CC10F0213D023B00DD9186 /* CGXFixedTopGeneralTitleView.m */,
-				E085CC8E214CE87B000A59A1 /* CGXFixedTopGeneralMainView.h */,
-				E085CC8F214CE87B000A59A1 /* CGXFixedTopGeneralMainView.m */,
 				B5CC10F2213D025000DD9186 /* CGXFixedTopGeneralTitleManager.h */,
 				B5CC10F3213D025000DD9186 /* CGXFixedTopGeneralTitleManager.m */,
 				B5CC10F5213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.h */,
 				B5CC10F6213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.m */,
-				B5CC10F8213D028100DD9186 /* CGXFixedTopGeneralTitleCell.h */,
-				B5CC10F9213D028100DD9186 /* CGXFixedTopGeneralTitleCell.m */,
-				E066DF8221528FB50077421A /* Framework */,
+				E066DF8221528FB50077421A /* CGXFixedTop */,
 			);
 			path = CGXFixedTopGeneralView;
 			sourceTree = "<group>";
@@ -136,9 +132,9 @@
 				B56BCB672127E6F5004C069E /* AppDelegate.m */,
 				B56BCB692127E6F5004C069E /* ViewController.h */,
 				B56BCB6A2127E6F5004C069E /* ViewController.m */,
-				046E3219227302E800E1CB4E /* CGXFixedTopGeneralView */,
 				E085CC91214D58DC000A59A1 /* PagtViewController.h */,
 				E085CC92214D58DC000A59A1 /* PagtViewController.m */,
+				046E3219227302E800E1CB4E /* CGXFixedTopGeneralView */,
 				B56BCB6C2127E6F5004C069E /* Main.storyboard */,
 				B56BCB6F2127E6FB004C069E /* Assets.xcassets */,
 				B56BCB712127E6FB004C069E /* LaunchScreen.storyboard */,
@@ -148,9 +144,13 @@
 			path = CGXFixedTopGeneralView;
 			sourceTree = "<group>";
 		};
-		E066DF8221528FB50077421A /* Framework */ = {
+		E066DF8221528FB50077421A /* CGXFixedTop */ = {
 			isa = PBXGroup;
 			children = (
+				B5CC10F8213D028100DD9186 /* CGXFixedTopGeneralTitleCell.h */,
+				B5CC10F9213D028100DD9186 /* CGXFixedTopGeneralTitleCell.m */,
+				E085CC8E214CE87B000A59A1 /* CGXFixedTopGeneralMainView.h */,
+				E085CC8F214CE87B000A59A1 /* CGXFixedTopGeneralMainView.m */,
 				E085CC87214CD1D6000A59A1 /* CGXFixedTopBadgeLabel.h */,
 				E085CC86214CD1D6000A59A1 /* CGXFixedTopBadgeLabel.m */,
 				E085CC85214CD1D6000A59A1 /* UIView+CGXFixedTopBadge.h */,
@@ -158,7 +158,7 @@
 				E085CC8B214CDB8A000A59A1 /* UIButton+CGXFixedTopGeneralTitleAndImage.h */,
 				E085CC8C214CDB8A000A59A1 /* UIButton+CGXFixedTopGeneralTitleAndImage.m */,
 			);
-			path = Framework;
+			path = CGXFixedTop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
