@@ -57,6 +57,12 @@
     }
     return _mainView;
 }
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    self.titleView.frame = CGRectMake(0, 0, CGRectGetWidth(self.bounds), self.manager.titleHeight);
+    self.mainView.frame = CGRectMake(0, self.manager.titleHeight, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds)-self.manager.titleHeight);
+}
 - (CGXFixedTopGeneralTitleManager *)manager
 {
     if (!_manager) {

@@ -49,6 +49,11 @@
     [self.mainScrollView scrollRectToVisible:CGRectMake(0, 0, self.mainScrollView.bounds.size.width, self.mainScrollView.bounds.size.height) animated:YES];
     [self addSubview:self.mainScrollView];
 }
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    self.mainScrollView.frame = CGRectMake(0, 0, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds));
+}
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     
@@ -72,7 +77,6 @@
 - (void)configSubview
 {
     for (int i = 0; i<self.vcArray.count; i++) {
-        
        UIViewController *vc = self.vcArray[i];
         vc.view.frame = CGRectMake(i*CGRectGetWidth(self.bounds), 0, self.mainScrollView.bounds.size.width, self.mainScrollView.bounds.size.height);
         [[self viewController:self] addChildViewController:vc];

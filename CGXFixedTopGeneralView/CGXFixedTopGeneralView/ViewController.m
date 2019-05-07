@@ -15,6 +15,28 @@
 
 #define randomColor random(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
+///NavBar高度
+#define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+#define kNavBarHeight 44.0f
+///导航栏高度
+#define kTopHeight  (kStatusBarHeight + kNavBarHeight)
+
+///tab安全区域
+#define kSafeHeight    (kStatusBarHeight>20 ? 34.0f : 0.0f)
+///导航栏安全区域
+#define kNavBarSafetyZone         (kStatusBarHeight>20 ? 44.0f : 0.0f)
+
+
+#define kTabBarHeight  (kStatusBarHeight>20 ? (49.0f+34.0f) : 49.0f)
+
+#define kVCHeight (ScreenHeight-kTopHeight-kTabBarHeight)
+#define kSafeVCHeight (kStatusBarHeight>20?(ScreenHeight-kTopHeight-34):(ScreenHeight-kTopHeight))
+
+//屏幕宽
+#define ScreenWidth                 [UIScreen mainScreen].bounds.size.width
+//屏幕高
+#define ScreenHeight                [UIScreen mainScreen].bounds.size.height
+
 @interface ViewController ()<CGXFixedTopGeneralMenuViewDelegate>
 {
     CGXFixedTopGeneralMenuView *menuView;
@@ -28,22 +50,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    page = 10;
-    
-     self.edgesForExtendedLayout = UIRectEdgeNone;
     // Do any additional setup after loading the view, typically from a nib.
+    page = 10;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = [UIColor whiteColor];
-    menuView = [[CGXFixedTopGeneralMenuView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-64-49)];;
+    menuView = [[CGXFixedTopGeneralMenuView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-kTabBarHeight-kTopHeight)];;
     menuView.delegate = self;
     menuView.backgroundColor = [UIColor lightGrayColor];
-    
     [self.view addSubview:menuView];
-    
     NSArray *titleArr = @[@"全部",@"代支付",@"已发货",@"已取消",@"已完成"];
     NSArray * nomArr = @[@"me_setting_store",@"me_setting_store",@"me_setting_store",@"me_setting_store",@"ic_tabbar_explore"];
     NSArray * selectArr = @[@"me_setting_union",@"me_setting_union",@"me_setting_union",@"me_setting_union",@"ic_tabbar_explore"];
-   
     vcArr = [NSMutableArray array];
     NSMutableArray *array = [NSMutableArray array];
     for (int i = 0; i<titleArr.count; i++) {
@@ -85,7 +102,7 @@
 
 - (void)selectIndexCGXFixedTopGeneralMenuView:(CGXFixedTopGeneralMenuView *)baseView didSelectIndex:(NSInteger)index
 {
-    NSLog(@"选择了：%ld",index);
+    NSLog(@"选择了：%ld",(long)index);
     
     page++;
     [menuView updateBadgeTitleWithBadge:page Inter:index];
