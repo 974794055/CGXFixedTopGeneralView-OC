@@ -13,15 +13,15 @@
 		B56BCB702127E6FB004C069E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B56BCB6F2127E6FB004C069E /* Assets.xcassets */; };
 		B56BCB732127E6FB004C069E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56BCB712127E6FB004C069E /* LaunchScreen.storyboard */; };
 		B56BCB762127E6FB004C069E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B56BCB752127E6FB004C069E /* main.m */; };
-		B5CC10F1213D023B00DD9186 /* CGXFixedTopGeneralTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CC10F0213D023B00DD9186 /* CGXFixedTopGeneralTitleView.m */; };
-		B5CC10F4213D025000DD9186 /* CGXFixedTopGeneralTitleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CC10F3213D025000DD9186 /* CGXFixedTopGeneralTitleManager.m */; };
-		B5CC10F7213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CC10F6213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.m */; };
-		B5CC10FA213D028100DD9186 /* CGXFixedTopGeneralTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CC10F9213D028100DD9186 /* CGXFixedTopGeneralTitleCell.m */; };
-		B5CC10FD213D02C200DD9186 /* CGXFixedTopGeneralMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CC10FC213D02C200DD9186 /* CGXFixedTopGeneralMenuView.m */; };
-		E085CC89214CD1D6000A59A1 /* CGXFixedTopBadgeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E085CC86214CD1D6000A59A1 /* CGXFixedTopBadgeLabel.m */; };
-		E085CC8A214CD1D6000A59A1 /* UIView+CGXFixedTopBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = E085CC88214CD1D6000A59A1 /* UIView+CGXFixedTopBadge.m */; };
-		E085CC8D214CDB8A000A59A1 /* UIButton+CGXFixedTopGeneralTitleAndImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E085CC8C214CDB8A000A59A1 /* UIButton+CGXFixedTopGeneralTitleAndImage.m */; };
-		E085CC90214CE87B000A59A1 /* CGXFixedTopGeneralMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = E085CC8F214CE87B000A59A1 /* CGXFixedTopGeneralMainView.m */; };
+		E02AA55D2292F09B003FB229 /* CGXFixedTopGeneralTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E02AA54A2292F09B003FB229 /* CGXFixedTopGeneralTitleView.m */; };
+		E02AA55E2292F09B003FB229 /* CGXFixedTopGeneralTitleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E02AA54C2292F09B003FB229 /* CGXFixedTopGeneralTitleItem.m */; };
+		E02AA55F2292F09B003FB229 /* CGXFixedTopGeneralTitleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E02AA5502292F09B003FB229 /* CGXFixedTopGeneralTitleManager.m */; };
+		E02AA5602292F09B003FB229 /* CGXFixedTopGeneralMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = E02AA5512292F09B003FB229 /* CGXFixedTopGeneralMenuView.m */; };
+		E02AA5612292F09B003FB229 /* UIButton+CGXFixedTopGeneralTitleAndImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E02AA5532292F09B003FB229 /* UIButton+CGXFixedTopGeneralTitleAndImage.m */; };
+		E02AA5622292F09B003FB229 /* CGXFixedTopGeneralTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E02AA5542292F09B003FB229 /* CGXFixedTopGeneralTitleCell.m */; };
+		E02AA5632292F09B003FB229 /* CGXFixedTopBadgeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E02AA5552292F09B003FB229 /* CGXFixedTopBadgeLabel.m */; };
+		E02AA5642292F09B003FB229 /* UIView+CGXFixedTopBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = E02AA55A2292F09B003FB229 /* UIView+CGXFixedTopBadge.m */; };
+		E02AA5652292F09B003FB229 /* CGXFixedTopGeneralMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = E02AA55B2292F09B003FB229 /* CGXFixedTopGeneralMainView.m */; };
 		E085CC93214D58DC000A59A1 /* PagtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E085CC92214D58DC000A59A1 /* PagtViewController.m */; };
 		FC933D83405FAE3FA54A8F2F /* libPods-CGXFixedTopGeneralView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE799EB018F870AAAA3D851 /* libPods-CGXFixedTopGeneralView.a */; };
 /* End PBXBuildFile section */
@@ -38,25 +38,25 @@
 		B56BCB722127E6FB004C069E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B56BCB742127E6FB004C069E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B56BCB752127E6FB004C069E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B5CC10EF213D023B00DD9186 /* CGXFixedTopGeneralTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopGeneralTitleView.h; sourceTree = "<group>"; };
-		B5CC10F0213D023B00DD9186 /* CGXFixedTopGeneralTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopGeneralTitleView.m; sourceTree = "<group>"; };
-		B5CC10F2213D025000DD9186 /* CGXFixedTopGeneralTitleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopGeneralTitleManager.h; sourceTree = "<group>"; };
-		B5CC10F3213D025000DD9186 /* CGXFixedTopGeneralTitleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopGeneralTitleManager.m; sourceTree = "<group>"; };
-		B5CC10F5213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopGeneralTitleItem.h; sourceTree = "<group>"; };
-		B5CC10F6213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopGeneralTitleItem.m; sourceTree = "<group>"; };
-		B5CC10F8213D028100DD9186 /* CGXFixedTopGeneralTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopGeneralTitleCell.h; sourceTree = "<group>"; };
-		B5CC10F9213D028100DD9186 /* CGXFixedTopGeneralTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopGeneralTitleCell.m; sourceTree = "<group>"; };
-		B5CC10FB213D02C200DD9186 /* CGXFixedTopGeneralMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopGeneralMenuView.h; sourceTree = "<group>"; };
-		B5CC10FC213D02C200DD9186 /* CGXFixedTopGeneralMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopGeneralMenuView.m; sourceTree = "<group>"; };
 		D42343D057CECEFFD5D202A1 /* Pods-CGXFixedTopGeneralView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGXFixedTopGeneralView.release.xcconfig"; path = "Pods/Target Support Files/Pods-CGXFixedTopGeneralView/Pods-CGXFixedTopGeneralView.release.xcconfig"; sourceTree = "<group>"; };
-		E085CC85214CD1D6000A59A1 /* UIView+CGXFixedTopBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CGXFixedTopBadge.h"; sourceTree = "<group>"; };
-		E085CC86214CD1D6000A59A1 /* CGXFixedTopBadgeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopBadgeLabel.m; sourceTree = "<group>"; };
-		E085CC87214CD1D6000A59A1 /* CGXFixedTopBadgeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopBadgeLabel.h; sourceTree = "<group>"; };
-		E085CC88214CD1D6000A59A1 /* UIView+CGXFixedTopBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CGXFixedTopBadge.m"; sourceTree = "<group>"; };
-		E085CC8B214CDB8A000A59A1 /* UIButton+CGXFixedTopGeneralTitleAndImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+CGXFixedTopGeneralTitleAndImage.h"; sourceTree = "<group>"; };
-		E085CC8C214CDB8A000A59A1 /* UIButton+CGXFixedTopGeneralTitleAndImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CGXFixedTopGeneralTitleAndImage.m"; sourceTree = "<group>"; };
-		E085CC8E214CE87B000A59A1 /* CGXFixedTopGeneralMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopGeneralMainView.h; sourceTree = "<group>"; };
-		E085CC8F214CE87B000A59A1 /* CGXFixedTopGeneralMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopGeneralMainView.m; sourceTree = "<group>"; };
+		E02AA54A2292F09B003FB229 /* CGXFixedTopGeneralTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopGeneralTitleView.m; sourceTree = "<group>"; };
+		E02AA54B2292F09B003FB229 /* CGXFixedTopGeneralTitleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopGeneralTitleManager.h; sourceTree = "<group>"; };
+		E02AA54C2292F09B003FB229 /* CGXFixedTopGeneralTitleItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopGeneralTitleItem.m; sourceTree = "<group>"; };
+		E02AA54D2292F09B003FB229 /* CGXFixedTopGeneralMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopGeneralMenuView.h; sourceTree = "<group>"; };
+		E02AA54E2292F09B003FB229 /* CGXFixedTopGeneralTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopGeneralTitleView.h; sourceTree = "<group>"; };
+		E02AA54F2292F09B003FB229 /* CGXFixedTopGeneralTitleItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopGeneralTitleItem.h; sourceTree = "<group>"; };
+		E02AA5502292F09B003FB229 /* CGXFixedTopGeneralTitleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopGeneralTitleManager.m; sourceTree = "<group>"; };
+		E02AA5512292F09B003FB229 /* CGXFixedTopGeneralMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopGeneralMenuView.m; sourceTree = "<group>"; };
+		E02AA5532292F09B003FB229 /* UIButton+CGXFixedTopGeneralTitleAndImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CGXFixedTopGeneralTitleAndImage.m"; sourceTree = "<group>"; };
+		E02AA5542292F09B003FB229 /* CGXFixedTopGeneralTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopGeneralTitleCell.m; sourceTree = "<group>"; };
+		E02AA5552292F09B003FB229 /* CGXFixedTopBadgeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopBadgeLabel.m; sourceTree = "<group>"; };
+		E02AA5562292F09B003FB229 /* CGXFixedTopGeneralMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopGeneralMainView.h; sourceTree = "<group>"; };
+		E02AA5572292F09B003FB229 /* UIView+CGXFixedTopBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CGXFixedTopBadge.h"; sourceTree = "<group>"; };
+		E02AA5582292F09B003FB229 /* UIButton+CGXFixedTopGeneralTitleAndImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CGXFixedTopGeneralTitleAndImage.h"; sourceTree = "<group>"; };
+		E02AA5592292F09B003FB229 /* CGXFixedTopGeneralTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopGeneralTitleCell.h; sourceTree = "<group>"; };
+		E02AA55A2292F09B003FB229 /* UIView+CGXFixedTopBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CGXFixedTopBadge.m"; sourceTree = "<group>"; };
+		E02AA55B2292F09B003FB229 /* CGXFixedTopGeneralMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGXFixedTopGeneralMainView.m; sourceTree = "<group>"; };
+		E02AA55C2292F09B003FB229 /* CGXFixedTopBadgeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopBadgeLabel.h; sourceTree = "<group>"; };
 		E085CC91214D58DC000A59A1 /* PagtViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PagtViewController.h; sourceTree = "<group>"; };
 		E085CC92214D58DC000A59A1 /* PagtViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PagtViewController.m; sourceTree = "<group>"; };
 		FBE799EB018F870AAAA3D851 /* libPods-CGXFixedTopGeneralView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CGXFixedTopGeneralView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,22 +74,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		046E3219227302E800E1CB4E /* CGXFixedTopGeneralView */ = {
-			isa = PBXGroup;
-			children = (
-				B5CC10FB213D02C200DD9186 /* CGXFixedTopGeneralMenuView.h */,
-				B5CC10FC213D02C200DD9186 /* CGXFixedTopGeneralMenuView.m */,
-				B5CC10EF213D023B00DD9186 /* CGXFixedTopGeneralTitleView.h */,
-				B5CC10F0213D023B00DD9186 /* CGXFixedTopGeneralTitleView.m */,
-				B5CC10F2213D025000DD9186 /* CGXFixedTopGeneralTitleManager.h */,
-				B5CC10F3213D025000DD9186 /* CGXFixedTopGeneralTitleManager.m */,
-				B5CC10F5213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.h */,
-				B5CC10F6213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.m */,
-				E066DF8221528FB50077421A /* CGXFixedTop */,
-			);
-			path = CGXFixedTopGeneralView;
-			sourceTree = "<group>";
-		};
 		5C53812AAC1CB99838DC48B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,7 +118,7 @@
 				B56BCB6A2127E6F5004C069E /* ViewController.m */,
 				E085CC91214D58DC000A59A1 /* PagtViewController.h */,
 				E085CC92214D58DC000A59A1 /* PagtViewController.m */,
-				046E3219227302E800E1CB4E /* CGXFixedTopGeneralView */,
+				E02AA5492292F09B003FB229 /* CGXFixedTopGeneralView-OC */,
 				B56BCB6C2127E6F5004C069E /* Main.storyboard */,
 				B56BCB6F2127E6FB004C069E /* Assets.xcassets */,
 				B56BCB712127E6FB004C069E /* LaunchScreen.storyboard */,
@@ -144,19 +128,36 @@
 			path = CGXFixedTopGeneralView;
 			sourceTree = "<group>";
 		};
-		E066DF8221528FB50077421A /* CGXFixedTop */ = {
+		E02AA5492292F09B003FB229 /* CGXFixedTopGeneralView-OC */ = {
 			isa = PBXGroup;
 			children = (
-				B5CC10F8213D028100DD9186 /* CGXFixedTopGeneralTitleCell.h */,
-				B5CC10F9213D028100DD9186 /* CGXFixedTopGeneralTitleCell.m */,
-				E085CC8E214CE87B000A59A1 /* CGXFixedTopGeneralMainView.h */,
-				E085CC8F214CE87B000A59A1 /* CGXFixedTopGeneralMainView.m */,
-				E085CC87214CD1D6000A59A1 /* CGXFixedTopBadgeLabel.h */,
-				E085CC86214CD1D6000A59A1 /* CGXFixedTopBadgeLabel.m */,
-				E085CC85214CD1D6000A59A1 /* UIView+CGXFixedTopBadge.h */,
-				E085CC88214CD1D6000A59A1 /* UIView+CGXFixedTopBadge.m */,
-				E085CC8B214CDB8A000A59A1 /* UIButton+CGXFixedTopGeneralTitleAndImage.h */,
-				E085CC8C214CDB8A000A59A1 /* UIButton+CGXFixedTopGeneralTitleAndImage.m */,
+				E02AA54A2292F09B003FB229 /* CGXFixedTopGeneralTitleView.m */,
+				E02AA54B2292F09B003FB229 /* CGXFixedTopGeneralTitleManager.h */,
+				E02AA54C2292F09B003FB229 /* CGXFixedTopGeneralTitleItem.m */,
+				E02AA54D2292F09B003FB229 /* CGXFixedTopGeneralMenuView.h */,
+				E02AA54E2292F09B003FB229 /* CGXFixedTopGeneralTitleView.h */,
+				E02AA54F2292F09B003FB229 /* CGXFixedTopGeneralTitleItem.h */,
+				E02AA5502292F09B003FB229 /* CGXFixedTopGeneralTitleManager.m */,
+				E02AA5512292F09B003FB229 /* CGXFixedTopGeneralMenuView.m */,
+				E02AA5522292F09B003FB229 /* CGXFixedTop */,
+			);
+			name = "CGXFixedTopGeneralView-OC";
+			path = "../../CGXFixedTopGeneralView-OC";
+			sourceTree = "<group>";
+		};
+		E02AA5522292F09B003FB229 /* CGXFixedTop */ = {
+			isa = PBXGroup;
+			children = (
+				E02AA5532292F09B003FB229 /* UIButton+CGXFixedTopGeneralTitleAndImage.m */,
+				E02AA5542292F09B003FB229 /* CGXFixedTopGeneralTitleCell.m */,
+				E02AA5552292F09B003FB229 /* CGXFixedTopBadgeLabel.m */,
+				E02AA5562292F09B003FB229 /* CGXFixedTopGeneralMainView.h */,
+				E02AA5572292F09B003FB229 /* UIView+CGXFixedTopBadge.h */,
+				E02AA5582292F09B003FB229 /* UIButton+CGXFixedTopGeneralTitleAndImage.h */,
+				E02AA5592292F09B003FB229 /* CGXFixedTopGeneralTitleCell.h */,
+				E02AA55A2292F09B003FB229 /* UIView+CGXFixedTopBadge.m */,
+				E02AA55B2292F09B003FB229 /* CGXFixedTopGeneralMainView.m */,
+				E02AA55C2292F09B003FB229 /* CGXFixedTopBadgeLabel.h */,
 			);
 			path = CGXFixedTop;
 			sourceTree = "<group>";
@@ -253,18 +254,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E02AA5652292F09B003FB229 /* CGXFixedTopGeneralMainView.m in Sources */,
 				E085CC93214D58DC000A59A1 /* PagtViewController.m in Sources */,
-				B5CC10FA213D028100DD9186 /* CGXFixedTopGeneralTitleCell.m in Sources */,
-				E085CC8A214CD1D6000A59A1 /* UIView+CGXFixedTopBadge.m in Sources */,
-				B5CC10F4213D025000DD9186 /* CGXFixedTopGeneralTitleManager.m in Sources */,
-				B5CC10FD213D02C200DD9186 /* CGXFixedTopGeneralMenuView.m in Sources */,
-				E085CC8D214CDB8A000A59A1 /* UIButton+CGXFixedTopGeneralTitleAndImage.m in Sources */,
-				B5CC10F1213D023B00DD9186 /* CGXFixedTopGeneralTitleView.m in Sources */,
-				E085CC90214CE87B000A59A1 /* CGXFixedTopGeneralMainView.m in Sources */,
-				E085CC89214CD1D6000A59A1 /* CGXFixedTopBadgeLabel.m in Sources */,
+				E02AA5622292F09B003FB229 /* CGXFixedTopGeneralTitleCell.m in Sources */,
+				E02AA55F2292F09B003FB229 /* CGXFixedTopGeneralTitleManager.m in Sources */,
+				E02AA5602292F09B003FB229 /* CGXFixedTopGeneralMenuView.m in Sources */,
 				B56BCB6B2127E6F5004C069E /* ViewController.m in Sources */,
+				E02AA5632292F09B003FB229 /* CGXFixedTopBadgeLabel.m in Sources */,
+				E02AA5612292F09B003FB229 /* UIButton+CGXFixedTopGeneralTitleAndImage.m in Sources */,
+				E02AA55D2292F09B003FB229 /* CGXFixedTopGeneralTitleView.m in Sources */,
+				E02AA5642292F09B003FB229 /* UIView+CGXFixedTopBadge.m in Sources */,
 				B56BCB762127E6FB004C069E /* main.m in Sources */,
-				B5CC10F7213D025F00DD9186 /* CGXFixedTopGeneralTitleItem.m in Sources */,
+				E02AA55E2292F09B003FB229 /* CGXFixedTopGeneralTitleItem.m in Sources */,
 				B56BCB682127E6F5004C069E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
