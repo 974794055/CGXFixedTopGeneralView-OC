@@ -27,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04DBB6CF2294F54F005D9541 /* CGXFixedTopGeneralView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGXFixedTopGeneralView.h; sourceTree = "<group>"; };
 		2D45C3398FA96285DB11352C /* Pods-CGXFixedTopGeneralView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGXFixedTopGeneralView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CGXFixedTopGeneralView/Pods-CGXFixedTopGeneralView.debug.xcconfig"; sourceTree = "<group>"; };
 		B56BCB632127E6F5004C069E /* CGXFixedTopGeneralView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGXFixedTopGeneralView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56BCB662127E6F5004C069E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -131,13 +132,14 @@
 		E02AA5492292F09B003FB229 /* CGXFixedTopGeneralView-OC */ = {
 			isa = PBXGroup;
 			children = (
+				04DBB6CF2294F54F005D9541 /* CGXFixedTopGeneralView.h */,
+				E02AA54E2292F09B003FB229 /* CGXFixedTopGeneralTitleView.h */,
 				E02AA54A2292F09B003FB229 /* CGXFixedTopGeneralTitleView.m */,
 				E02AA54B2292F09B003FB229 /* CGXFixedTopGeneralTitleManager.h */,
+				E02AA5502292F09B003FB229 /* CGXFixedTopGeneralTitleManager.m */,
+				E02AA54F2292F09B003FB229 /* CGXFixedTopGeneralTitleItem.h */,
 				E02AA54C2292F09B003FB229 /* CGXFixedTopGeneralTitleItem.m */,
 				E02AA54D2292F09B003FB229 /* CGXFixedTopGeneralMenuView.h */,
-				E02AA54E2292F09B003FB229 /* CGXFixedTopGeneralTitleView.h */,
-				E02AA54F2292F09B003FB229 /* CGXFixedTopGeneralTitleItem.h */,
-				E02AA5502292F09B003FB229 /* CGXFixedTopGeneralTitleManager.m */,
 				E02AA5512292F09B003FB229 /* CGXFixedTopGeneralMenuView.m */,
 				E02AA5522292F09B003FB229 /* CGXFixedTop */,
 			);
@@ -148,16 +150,16 @@
 		E02AA5522292F09B003FB229 /* CGXFixedTop */ = {
 			isa = PBXGroup;
 			children = (
-				E02AA5532292F09B003FB229 /* UIButton+CGXFixedTopGeneralTitleAndImage.m */,
+				E02AA5592292F09B003FB229 /* CGXFixedTopGeneralTitleCell.h */,
 				E02AA5542292F09B003FB229 /* CGXFixedTopGeneralTitleCell.m */,
+				E02AA55C2292F09B003FB229 /* CGXFixedTopBadgeLabel.h */,
 				E02AA5552292F09B003FB229 /* CGXFixedTopBadgeLabel.m */,
 				E02AA5562292F09B003FB229 /* CGXFixedTopGeneralMainView.h */,
-				E02AA5572292F09B003FB229 /* UIView+CGXFixedTopBadge.h */,
-				E02AA5582292F09B003FB229 /* UIButton+CGXFixedTopGeneralTitleAndImage.h */,
-				E02AA5592292F09B003FB229 /* CGXFixedTopGeneralTitleCell.h */,
-				E02AA55A2292F09B003FB229 /* UIView+CGXFixedTopBadge.m */,
 				E02AA55B2292F09B003FB229 /* CGXFixedTopGeneralMainView.m */,
-				E02AA55C2292F09B003FB229 /* CGXFixedTopBadgeLabel.h */,
+				E02AA5572292F09B003FB229 /* UIView+CGXFixedTopBadge.h */,
+				E02AA55A2292F09B003FB229 /* UIView+CGXFixedTopBadge.m */,
+				E02AA5582292F09B003FB229 /* UIButton+CGXFixedTopGeneralTitleAndImage.h */,
+				E02AA5532292F09B003FB229 /* UIButton+CGXFixedTopGeneralTitleAndImage.m */,
 			);
 			path = CGXFixedTop;
 			sourceTree = "<group>";
