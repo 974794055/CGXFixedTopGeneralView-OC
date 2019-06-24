@@ -22,33 +22,33 @@ static NSString *const kBadgeLabel = @"kBadgeLabel";
 
 @implementation UIView (CGXFixedTopBadge)
 
-- (void)pp_addBadgeWithText:(NSString *)text
+- (void)gx_addBadgeWithText:(NSString *)text
 {
     [self lazyLoadBadgeLabel];
-    [self pp_showBadge];
+    [self gx_showBadge];
     self.badgeLabel.text = text;
 }
 
-- (void)pp_addBadgeWithNumber:(NSInteger)number
+- (void)gx_addBadgeWithNumber:(NSInteger)number
 {
     if (number <= 0) {
-        [self pp_addBadgeWithText:@"0"];
-        [self pp_hiddenBadge];
+        [self gx_addBadgeWithText:@"0"];
+        [self gx_hiddenBadge];
         return;
     }
-    [self pp_addBadgeWithText:[NSString stringWithFormat:@"%ld",number]];
+    [self gx_addBadgeWithText:[NSString stringWithFormat:@"%ld",number]];
 }
 
-- (void)pp_addDotWithColor:(UIColor *)color
+- (void)gx_addDotWithColor:(UIColor *)color
 {
-    [self pp_addBadgeWithText:nil];
-    [self pp_setBadgeHeight:8];
+    [self gx_addBadgeWithText:nil];
+    [self gx_setBadgeHeight:8];
     if (color) {
         self.badgeLabel.backgroundColor = color;
     }
 }
 
-- (void)pp_moveBadgeWithX:(CGFloat)x Y:(CGFloat)y
+- (void)gx_moveBadgeWithX:(CGFloat)x Y:(CGFloat)y
 {
     [self lazyLoadBadgeLabel];
     
@@ -68,58 +68,58 @@ static NSString *const kBadgeLabel = @"kBadgeLabel";
             break;
     }
 }
-- (void)pp_setBadgeFlexMode:(CGXFixedTopBadgeLabelFlexMode)flexMode
+- (void)gx_setBadgeFlexMode:(CGXFixedTopBadgeLabelFlexMode)flexMode
 {
     self.badgeLabel.flexMode = flexMode;
-    [self pp_moveBadgeWithX:self.badgeLabel.offset.x Y:self.badgeLabel.offset.y];
+    [self gx_moveBadgeWithX:self.badgeLabel.offset.x Y:self.badgeLabel.offset.y];
 }
 
-- (void)pp_setBadgeLabelAttributes:(void (^)(CGXFixedTopBadgeLabel *))badgeLabel
+- (void)gx_setBadgeLabelAttributes:(void (^)(CGXFixedTopBadgeLabel *))badgeLabel
 {
     [self lazyLoadBadgeLabel];
     badgeLabel ? badgeLabel(self.badgeLabel) : nil;
 }
 
-- (void)pp_setBadgeHeight:(CGFloat)height
+- (void)gx_setBadgeHeight:(CGFloat)height
 {
     CGFloat scale = height / self.badgeLabel.p_height;
     self.badgeLabel.transform = CGAffineTransformScale(self.badgeLabel.transform, scale, scale);
 }
 
-- (void)pp_showBadge
+- (void)gx_showBadge
 {
     self.badgeLabel.hidden = NO;
 }
 
-- (void)pp_hiddenBadge
+- (void)gx_hiddenBadge
 {
     self.badgeLabel.hidden = YES;
 }
 
-- (void)pp_increase
+- (void)gx_increase
 {
-    [self pp_increaseBy:1];
+    [self gx_increaseBy:1];
 }
 
-- (void)pp_increaseBy:(NSInteger)number
+- (void)gx_increaseBy:(NSInteger)number
 {
     NSInteger result = self.badgeLabel.text.integerValue + number;
     if (result > 0) {
-        [self pp_showBadge];
+        [self gx_showBadge];
     }
     self.badgeLabel.text = [NSString stringWithFormat:@"%ld",result];
 }
 
-- (void)pp_decrease
+- (void)gx_decrease
 {
-    [self pp_decreaseBy:1];
+    [self gx_decreaseBy:1];
 }
 
-- (void)pp_decreaseBy:(NSInteger)number
+- (void)gx_decreaseBy:(NSInteger)number
 {
     NSInteger result = self.badgeLabel.text.integerValue - number;
     if (result <= 0) {
-        [self pp_hiddenBadge];
+        [self gx_hiddenBadge];
         self.badgeLabel.text = @"0";
         return;
     }

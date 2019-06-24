@@ -21,14 +21,14 @@ typedef NS_ENUM(NSUInteger, CGXFixedTopBadgeLabelFlexMode);
  
  Add Badge with text content, the default upper right corner, red backgroundColor, 18pts
  */
-- (void)pp_addBadgeWithText:(NSString *)text;
+- (void)gx_addBadgeWithText:(NSString *)text;
 
 /**
  添加带数字的Badge, 默认右上角,红色,18pts
  
  Add the Badge with numbers, the default upper right corner, red backgroundColor, 18pts
  */
-- (void)pp_addBadgeWithNumber:(NSInteger)number;
+- (void)gx_addBadgeWithNumber:(NSInteger)number;
 
 /**
  设置Badge的高度,因为Badge宽度是动态可变的,通过改变Badge高度,其宽度也按比例变化,方便布局
@@ -42,7 +42,7 @@ typedef NS_ENUM(NSUInteger, CGXFixedTopBadgeLabelFlexMode);
  
  @param height 高度大小
  */
-- (void)pp_setBadgeHeight:(CGFloat)height;
+- (void)gx_setBadgeHeight:(CGFloat)height;
 
 /**
  设置Badge的偏移量, Badge中心点默认为其父视图的右上角
@@ -52,7 +52,7 @@ typedef NS_ENUM(NSUInteger, CGXFixedTopBadgeLabelFlexMode);
  @param x X轴偏移量 (x<0: 左移, x>0: 右移) axis offset (x <0: left, x> 0: right)
  @param y Y轴偏移量 (y<0: 上移, y>0: 下移) axis offset ( Y <0: up, y> 0: down)
  */
-- (void)pp_moveBadgeWithX:(CGFloat)x Y:(CGFloat)y;
+- (void)gx_moveBadgeWithX:(CGFloat)x Y:(CGFloat)y;
 
 /**
  设置Badge伸缩的方向
@@ -65,20 +65,20 @@ typedef NS_ENUM(NSUInteger, CGXFixedTopBadgeLabelFlexMode);
  
  @param flexMode : Default is PPBadgeViewFlexModeTail
  */
-- (void)pp_setBadgeFlexMode:(CGXFixedTopBadgeLabelFlexMode)flexMode;
+- (void)gx_setBadgeFlexMode:(CGXFixedTopBadgeLabelFlexMode)flexMode;
 
 /**
  设置Bage的属性
  
  Set properties for Badge
  */
-- (void)pp_setBadgeLabelAttributes:(void(^)(CGXFixedTopBadgeLabel *badgeLabel))attributes;
+- (void)gx_setBadgeLabelAttributes:(void(^)(CGXFixedTopBadgeLabel *badgeLabel))attributes;
 
 /// 显示Badge
-- (void)pp_showBadge;
+- (void)gx_showBadge;
 
 /// 隐藏Badge
-- (void)pp_hiddenBadge;
+- (void)gx_hiddenBadge;
 
 
 @end

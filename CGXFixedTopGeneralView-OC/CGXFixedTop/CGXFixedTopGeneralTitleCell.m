@@ -77,13 +77,13 @@
             [self showCellImageModel:item];
         }
     }
-    [self.titleBtn pp_setBadgeLabelAttributes:^(CGXFixedTopBadgeLabel *badgeLabel) {
+    [self.titleBtn gx_setBadgeLabelAttributes:^(CGXFixedTopBadgeLabel *badgeLabel) {
         badgeLabel.p_width = 100 ;
         badgeLabel.p_right = 0;
     }];
     if (item.badge > 0) {
         
-        [self.titleBtn pp_setBadgeLabelAttributes:^(CGXFixedTopBadgeLabel *badgeLabel) {
+        [self.titleBtn gx_setBadgeLabelAttributes:^(CGXFixedTopBadgeLabel *badgeLabel) {
             badgeLabel.textColor = item.badgeTitleColor ;
             badgeLabel.font = item.badgeFont;
             badgeLabel.backgroundColor = item.badgeBGColor;
@@ -91,28 +91,28 @@
         
         
         if (item.badge <item.badgePage) {
-            [self.titleBtn pp_addBadgeWithText:[NSString stringWithFormat:@"%ld",item.badge]];
+            [self.titleBtn gx_addBadgeWithText:[NSString stringWithFormat:@"%ld",item.badge]];
         }else{
-            [self.titleBtn pp_addBadgeWithText:@"999+"];
+            [self.titleBtn gx_addBadgeWithText:@"999+"];
         }
-      [self.titleBtn pp_moveBadgeWithX:item.badgeX Y:item.badgeY];
-        [self.titleBtn pp_showBadge];
+      [self.titleBtn gx_moveBadgeWithX:item.badgeX Y:item.badgeY];
+        [self.titleBtn gx_showBadge];
         
         switch (item.badgeFlexMode) {
             case CGXFixedTopGeneralTitleItemFlexModeHead:
-                [self.titleBtn pp_setBadgeFlexMode:CGXFixedTopBadgeLabelFlexModeHead];
+                [self.titleBtn gx_setBadgeFlexMode:CGXFixedTopBadgeLabelFlexModeHead];
                 break;
             case CGXFixedTopGeneralTitleItemFlexModeTail:
-                [self.titleBtn pp_setBadgeFlexMode:CGXFixedTopBadgeLabelFlexModeTail];
+                [self.titleBtn gx_setBadgeFlexMode:CGXFixedTopBadgeLabelFlexModeTail];
                 break;
             case CGXFixedTopGeneralTitleItemFlexModeMiddle:
-                [self.titleBtn pp_setBadgeFlexMode:CGXFixedTopBadgeLabelFlexModeMiddle];
+                [self.titleBtn gx_setBadgeFlexMode:CGXFixedTopBadgeLabelFlexModeMiddle];
                 break;
             default:
                 break;
         }
     } else{
-        [self.titleBtn pp_hiddenBadge];
+        [self.titleBtn gx_hiddenBadge];
     }
     
     
