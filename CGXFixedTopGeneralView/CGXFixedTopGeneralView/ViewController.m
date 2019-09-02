@@ -110,6 +110,10 @@
     PagtViewController *vc = vcArr[index];
     vc.inter = index;
 }
+- (void)scrollerIndexCGXFixedTopGeneralMenuView:(CGXFixedTopGeneralMenuView *)baseView didSelectIndex:(NSInteger)index
+{
+    NSLog(@"滚动：%ld",(long)index);
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

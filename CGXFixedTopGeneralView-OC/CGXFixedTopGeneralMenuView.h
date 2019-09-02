@@ -22,6 +22,9 @@
 
 //更新角标
 - (void)updateBadgeTitleWithBadge:(NSInteger)badge Inter:(NSInteger)inter;
+//更新标题文字
+- (void)updateWithBtnWithTitle:(NSString *)title Inter:(NSInteger)inter;
+- (void)updateWithBtnWithAttributedString:(NSAttributedString *)attributed SelAttributedString:(NSAttributedString *)selAttributed Inter:(NSInteger)inter;
 @end
 
 
@@ -32,5 +35,6 @@
 /*点击事件*/
 - (void)selectIndexCGXFixedTopGeneralMenuView:(CGXFixedTopGeneralMenuView *)baseView didSelectIndex:(NSInteger)index;
 
-
+/*滚动事件*/
+- (void)scrollerIndexCGXFixedTopGeneralMenuView:(CGXFixedTopGeneralMenuView *)baseView didSelectIndex:(NSInteger)index;
 @end
