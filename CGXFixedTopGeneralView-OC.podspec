@@ -27,7 +27,7 @@ s.public_header_files = 'CGXFixedTopGeneralView-OC/CGXFixedTopGeneralView.h'
 
  s.subspec 'TitleView' do |ss|
     ss.source_files = 'CGXFixedTopGeneralView-OC/TitleView/**/*.{h,m}'
-  
+  ss.dependency 'CGXFixedTopGeneralView-OC/Common'
   end
 
  s.subspec 'MenuView' do |ss|
