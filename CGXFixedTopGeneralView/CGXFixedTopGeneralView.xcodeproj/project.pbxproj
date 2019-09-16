@@ -84,6 +84,8 @@
 				E02AA5502292F09B003FB229 /* CGXFixedTopGeneralTitleManager.m */,
 				E02AA54F2292F09B003FB229 /* CGXFixedTopGeneralTitleItem.h */,
 				E02AA54C2292F09B003FB229 /* CGXFixedTopGeneralTitleItem.m */,
+				E02AA5592292F09B003FB229 /* CGXFixedTopGeneralTitleCell.h */,
+				E02AA5542292F09B003FB229 /* CGXFixedTopGeneralTitleCell.m */,
 			);
 			path = TitleView;
 			sourceTree = "<group>";
@@ -166,8 +168,6 @@
 		E02AA5522292F09B003FB229 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				E02AA5592292F09B003FB229 /* CGXFixedTopGeneralTitleCell.h */,
-				E02AA5542292F09B003FB229 /* CGXFixedTopGeneralTitleCell.m */,
 				E02AA55C2292F09B003FB229 /* CGXFixedTopBadgeLabel.h */,
 				E02AA5552292F09B003FB229 /* CGXFixedTopBadgeLabel.m */,
 				E02AA5562292F09B003FB229 /* CGXFixedTopGeneralMainView.h */,
