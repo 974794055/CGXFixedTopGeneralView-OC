@@ -71,12 +71,12 @@
     return _manager;
 }
 
-- (void)updateMenuWithTitleAry:(NSMutableArray<CGXFixedTopGeneralTitleItem *> *)titleAry VcAry:(NSMutableArray *)vcAry
+- (void)updateMenuWithTitleAry:(NSMutableArray<CGXFixedTopGeneralTitleItem *> *)titleAry VcAry:(NSMutableArray<UIViewController *> *)vcAry
 {
     [self.titleView updateWithTitleArray:titleAry Manager:self.manager];
     [self.mainView loadMainVC:vcAry];
 }
-- (void)updateMenuWithTitleAry:(NSMutableArray<CGXFixedTopGeneralTitleItem *> *)titleAry VcAry:(NSMutableArray *)vcAry Manager:(CGXFixedTopGeneralTitleManager *)manager
+- (void)updateMenuWithTitleAry:(NSMutableArray<CGXFixedTopGeneralTitleItem *> *)titleAry VcAry:(NSMutableArray<UIViewController *> *)vcAry Manager:(CGXFixedTopGeneralTitleManager *)manager
 {
     [self.titleView updateWithTitleArray:titleAry Manager:manager];
     [self.mainView loadMainVC:vcAry];

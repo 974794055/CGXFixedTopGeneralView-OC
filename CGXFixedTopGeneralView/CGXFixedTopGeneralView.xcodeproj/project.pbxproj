@@ -75,6 +75,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0408E5CA232F6E8A002BAEFF /* TitleView */ = {
+			isa = PBXGroup;
+			children = (
+				E02AA54E2292F09B003FB229 /* CGXFixedTopGeneralTitleView.h */,
+				E02AA54A2292F09B003FB229 /* CGXFixedTopGeneralTitleView.m */,
+				E02AA54B2292F09B003FB229 /* CGXFixedTopGeneralTitleManager.h */,
+				E02AA5502292F09B003FB229 /* CGXFixedTopGeneralTitleManager.m */,
+				E02AA54F2292F09B003FB229 /* CGXFixedTopGeneralTitleItem.h */,
+				E02AA54C2292F09B003FB229 /* CGXFixedTopGeneralTitleItem.m */,
+			);
+			path = TitleView;
+			sourceTree = "<group>";
+		};
+		0408E5CB232F6EAF002BAEFF /* MenuView */ = {
+			isa = PBXGroup;
+			children = (
+				E02AA54D2292F09B003FB229 /* CGXFixedTopGeneralMenuView.h */,
+				E02AA5512292F09B003FB229 /* CGXFixedTopGeneralMenuView.m */,
+			);
+			path = MenuView;
+			sourceTree = "<group>";
+		};
 		5C53812AAC1CB99838DC48B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,21 +155,15 @@
 			isa = PBXGroup;
 			children = (
 				04DBB6CF2294F54F005D9541 /* CGXFixedTopGeneralView.h */,
-				E02AA54E2292F09B003FB229 /* CGXFixedTopGeneralTitleView.h */,
-				E02AA54A2292F09B003FB229 /* CGXFixedTopGeneralTitleView.m */,
-				E02AA54B2292F09B003FB229 /* CGXFixedTopGeneralTitleManager.h */,
-				E02AA5502292F09B003FB229 /* CGXFixedTopGeneralTitleManager.m */,
-				E02AA54F2292F09B003FB229 /* CGXFixedTopGeneralTitleItem.h */,
-				E02AA54C2292F09B003FB229 /* CGXFixedTopGeneralTitleItem.m */,
-				E02AA54D2292F09B003FB229 /* CGXFixedTopGeneralMenuView.h */,
-				E02AA5512292F09B003FB229 /* CGXFixedTopGeneralMenuView.m */,
-				E02AA5522292F09B003FB229 /* CGXFixedTop */,
+				0408E5CB232F6EAF002BAEFF /* MenuView */,
+				0408E5CA232F6E8A002BAEFF /* TitleView */,
+				E02AA5522292F09B003FB229 /* Common */,
 			);
 			name = "CGXFixedTopGeneralView-OC";
 			path = "../../CGXFixedTopGeneralView-OC";
 			sourceTree = "<group>";
 		};
-		E02AA5522292F09B003FB229 /* CGXFixedTop */ = {
+		E02AA5522292F09B003FB229 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				E02AA5592292F09B003FB229 /* CGXFixedTopGeneralTitleCell.h */,
@@ -161,7 +177,7 @@
 				E02AA5582292F09B003FB229 /* UIButton+CGXFixedTopGeneralTitleAndImage.h */,
 				E02AA5532292F09B003FB229 /* UIButton+CGXFixedTopGeneralTitleAndImage.m */,
 			);
-			path = CGXFixedTop;
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

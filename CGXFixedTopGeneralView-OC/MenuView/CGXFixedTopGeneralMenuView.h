@@ -16,9 +16,9 @@
 
 @property(nonatomic,weak) id <CGXFixedTopGeneralMenuViewDelegate>delegate;
 
-- (void)updateMenuWithTitleAry:(NSMutableArray *)titleAry VcAry:(NSMutableArray *)vcAry;
+- (void)updateMenuWithTitleAry:(NSMutableArray<CGXFixedTopGeneralTitleItem *> *)titleAry VcAry:(NSMutableArray<UIViewController *> *)vcAry;
 
-- (void)updateMenuWithTitleAry:(NSMutableArray *)titleAry VcAry:(NSMutableArray *)vcAry Manager:(CGXFixedTopGeneralTitleManager *)manager;
+- (void)updateMenuWithTitleAry:(NSMutableArray<CGXFixedTopGeneralTitleItem *> *)titleAry VcAry:(NSMutableArray<UIViewController *> *)vcAry Manager:(CGXFixedTopGeneralTitleManager *)manager;
 
 //更新角标
 - (void)updateBadgeTitleWithBadge:(NSInteger)badge Inter:(NSInteger)inter;
