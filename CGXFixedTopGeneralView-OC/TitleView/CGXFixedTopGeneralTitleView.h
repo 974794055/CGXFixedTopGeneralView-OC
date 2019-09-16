@@ -11,6 +11,7 @@
 
 #import "CGXFixedTopGeneralTitleManager.h"
 #import "CGXFixedTopGeneralTitleItem.h"
+#import "CGXFixedTopGeneralTitleCell.h"
 
 @protocol CGXFixedTopGeneralTitleViewDelegate;
 

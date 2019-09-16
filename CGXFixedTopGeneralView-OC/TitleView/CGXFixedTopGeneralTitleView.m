@@ -8,7 +8,7 @@
 //
 
 #import "CGXFixedTopGeneralTitleView.h"
-#import "CGXFixedTopGeneralTitleCell.h"
+
 @interface CGXFixedTopGeneralTitleView()<CGXFixedTopGeneralTitleCellDelegate>
 
 @property (nonatomic , strong) CGXFixedTopGeneralTitleManager *manager;

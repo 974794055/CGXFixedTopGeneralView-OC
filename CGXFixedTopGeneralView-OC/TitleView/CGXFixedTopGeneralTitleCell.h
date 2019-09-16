@@ -11,6 +11,7 @@
 #import "CGXFixedTopGeneralTitleItem.h"
 #import "UIView+CGXFixedTopBadge.h"
 #import "CGXFixedTopBadgeLabel.h"
+#import "UIButton+CGXFixedTopGeneralTitleAndImage.h"
 
 @protocol CGXFixedTopGeneralTitleCellDelegate;
 

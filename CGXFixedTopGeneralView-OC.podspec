@@ -12,30 +12,7 @@ s.requires_arc = true #是否支持ARC
 s.frameworks = 'UIKit'
 
 
-#s.source_files  =  "CGXFixedTopGeneralView-OC", "CGXFixedTopGeneralView-OC/**/*.{h,m}" #需要托管的源代码路径
-
-#需要托管的源代码路径
-s.source_files = 'CGXFixedTopGeneralView-OC/CGXFixedTopGeneralView.h'
-
-#开源库头文件
-s.public_header_files = 'CGXFixedTopGeneralView-OC/CGXFixedTopGeneralView.h'
-
- s.subspec 'Common' do |ss|
-    ss.source_files = 'CGXFixedTopGeneralView-OC/Common/**/*.{h,m}'
-
-  end
-
- s.subspec 'TitleView' do |ss|
-    ss.source_files = 'CGXFixedTopGeneralView-OC/TitleView/**/*.{h,m}'
-  ss.dependency 'CGXFixedTopGeneralView-OC/Common'
-  end
-
- s.subspec 'MenuView' do |ss|
-    ss.source_files = 'CGXFixedTopGeneralView-OC/MenuView/**/*.{h,m}'
-    ss.dependency 'CGXFixedTopGeneralView-OC/Common'
-    ss.dependency 'CGXFixedTopGeneralView-OC/TitleView'
-  end
-
+s.source_files  =  "CGXFixedTopGeneralView-OC", "CGXFixedTopGeneralView-OC/**/*.{h,m}" #需要托管的源代码路径
 
 end
 
