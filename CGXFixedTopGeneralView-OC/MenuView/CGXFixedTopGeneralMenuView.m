@@ -71,12 +71,12 @@
     return _manager;
 }
 
-- (void)updateMenuWithTitleAry:(NSMutableArray<CGXFixedTopGeneralTitleItem *> *)titleAry VcAry:(NSMutableArray *)vcAry
+- (void)updateMenuWithTitleAry:(NSMutableArray<CGXFixedTopGeneralTitleItem *> *)titleAry VcAry:(NSMutableArray<UIViewController *> *)vcAry
 {
     [self.titleView updateWithTitleArray:titleAry Manager:self.manager];
     [self.mainView loadMainVC:vcAry];
 }
-- (void)updateMenuWithTitleAry:(NSMutableArray<CGXFixedTopGeneralTitleItem *> *)titleAry VcAry:(NSMutableArray *)vcAry Manager:(CGXFixedTopGeneralTitleManager *)manager
+- (void)updateMenuWithTitleAry:(NSMutableArray<CGXFixedTopGeneralTitleItem *> *)titleAry VcAry:(NSMutableArray<UIViewController *> *)vcAry Manager:(CGXFixedTopGeneralTitleManager *)manager
 {
     [self.titleView updateWithTitleArray:titleAry Manager:manager];
     [self.mainView loadMainVC:vcAry];
@@ -87,6 +87,15 @@
 {
     [self.titleView updateBadgeTitleWithBadge:badge Inter:inter];
 }
+//更新标题文字
+- (void)updateWithBtnWithTitle:(NSString *)title Inter:(NSInteger)inter
+{
+    [self.titleView updateWithBtnWithTitle:title Inter:inter];
+}
+- (void)updateWithBtnWithAttributedString:(NSAttributedString *)attributed SelAttributedString:(NSAttributedString *)selAttributed Inter:(NSInteger)inter
+{
+    [self.titleView updateWithBtnWithAttributedString:attributed SelAttributedString:selAttributed Inter:inter];
+}
 - (void)selectIndexCGXFixedTopGeneralTitleView:(CGXFixedTopGeneralTitleView *)baseView didSelectIndex:(NSInteger)index
 {
      [self.mainView selectCurrentInterCGXFixedTopGeneralMainViewWithInter:index];
@@ -95,9 +104,15 @@
     }
    
 }
+- (void)scrollerIndexCGXFixedTopGeneralTitleView:(CGXFixedTopGeneralTitleView *)baseView didSelectIndex:(NSInteger)index
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(scrollerIndexCGXFixedTopGeneralMenuView:didSelectIndex:)]) {
+        [self.delegate scrollerIndexCGXFixedTopGeneralMenuView:self didSelectIndex:index];
+    }
+}
 - (void)selectIndexCGXFixedTopGeneralMainView:(CGXFixedTopGeneralMainView *)baseView Inter:(NSInteger)inter
 {
-    [self.titleView selectCurrentInterCGXFixedTopGeneralTitleViewWithInter:inter];
+    [self.titleView scrollerCurrentInterCGXFixedTopGeneralTitleViewWithInter:inter];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

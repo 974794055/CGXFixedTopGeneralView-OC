@@ -8,7 +8,7 @@
 //
 
 #import "CGXFixedTopGeneralTitleView.h"
-#import "CGXFixedTopGeneralTitleCell.h"
+
 @interface CGXFixedTopGeneralTitleView()<CGXFixedTopGeneralTitleCellDelegate>
 
 @property (nonatomic , strong) CGXFixedTopGeneralTitleManager *manager;
@@ -115,6 +115,33 @@
         [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
     }
 }
+//更新标题文字
+- (void)updateWithBtnWithTitle:(NSString *)title Inter:(NSInteger)inter
+{
+    if (inter>self.titleArray.count-1) {
+        return;
+    }
+    CGXFixedTopGeneralTitleItem *item = self.titleArray[inter];
+    item.title = title;
+    item.titleNormalAttributed= [[NSMutableAttributedString  alloc] initWithString:@""];
+     item.titleSelectAttributed= [[NSMutableAttributedString  alloc] initWithString:@""];
+    [self.titleArray replaceObjectAtIndex:inter withObject:item];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:inter inSection:0];
+    [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+}
+- (void)updateWithBtnWithAttributedString:(NSAttributedString *)attributed SelAttributedString:(NSAttributedString *)selAttributed Inter:(NSInteger)inter
+{
+    if (inter>self.titleArray.count-1) {
+        return;
+    }
+    CGXFixedTopGeneralTitleItem *item = self.titleArray[inter];
+    item.title = @"";
+    item.titleNormalAttributed= attributed;
+    item.titleSelectAttributed= selAttributed;
+    [self.titleArray replaceObjectAtIndex:inter withObject:item];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:inter inSection:0];
+    [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+}
 - (void)updateM
 {
     if (self.manager.isTopLine) {
@@ -127,7 +154,7 @@
     
     [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:self.manager.currentSelected inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
     [self updatesliderView];
-    [self selectCurrentInterCGXFixedTopGeneralTitleView:[NSIndexPath indexPathForRow:self.manager.currentSelected inSection:0]];
+    [self selectCurrentInterCGXFixedTopGeneralTitleView:[NSIndexPath indexPathForRow:self.manager.currentSelected inSection:0] IsSelect:YES];
     [self.collectionView reloadData];
     
 }
@@ -236,22 +263,29 @@
     CGXFixedTopGeneralTitleItem *item = self.titleArray[indexPath.row];
     
     if (!item.adjustsImageWhenDisabled) {
-        [self selectCurrentInterCGXFixedTopGeneralTitleView:indexPath];
+        [self selectCurrentInterCGXFixedTopGeneralTitleView:indexPath IsSelect:YES];
     }
 }
 - (void)selectBtnWithCell:(CGXFixedTopGeneralTitleCell *)cell TitleBtn:(UIButton *)titleBtn
 {
     NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
     
-    [self selectCurrentInterCGXFixedTopGeneralTitleView:indexPath];
+    [self selectCurrentInterCGXFixedTopGeneralTitleView:indexPath IsSelect:YES];
 }
 //外界调用 默认选中
 - (void)selectCurrentInterCGXFixedTopGeneralTitleViewWithInter:(NSInteger)inter
 {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:inter inSection:0];
-     [self selectCurrentInterCGXFixedTopGeneralTitleView:indexPath];
+     [self selectCurrentInterCGXFixedTopGeneralTitleView:indexPath IsSelect:YES];
 }
-- (void)selectCurrentInterCGXFixedTopGeneralTitleView:(NSIndexPath *)indexPath
+
+//外界滚动
+- (void)scrollerCurrentInterCGXFixedTopGeneralTitleViewWithInter:(NSInteger)inter
+{
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:inter inSection:0];
+    [self selectCurrentInterCGXFixedTopGeneralTitleView:indexPath IsSelect:NO];
+}
+- (void)selectCurrentInterCGXFixedTopGeneralTitleView:(NSIndexPath *)indexPath IsSelect:(BOOL)isSelect
 {
     if (self.manager.isClick) {
         if (!self.manager.isFirst) {
@@ -272,8 +306,14 @@
     }
     [self updatesliderView];
     [self.collectionView reloadData];
-    if (self.delegate && [self.delegate respondsToSelector:@selector(selectIndexCGXFixedTopGeneralTitleView:didSelectIndex:)]) {
-        [self.delegate selectIndexCGXFixedTopGeneralTitleView:self  didSelectIndex:indexPath.row];
+    if (isSelect) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(selectIndexCGXFixedTopGeneralTitleView:didSelectIndex:)]) {
+            [self.delegate selectIndexCGXFixedTopGeneralTitleView:self  didSelectIndex:indexPath.row];
+        }
+    } else{
+        if (self.delegate && [self.delegate respondsToSelector:@selector(scrollerIndexCGXFixedTopGeneralTitleView:didSelectIndex:)]) {
+            [self.delegate scrollerIndexCGXFixedTopGeneralTitleView:self  didSelectIndex:indexPath.row];
+        }
     }
 }
 /*

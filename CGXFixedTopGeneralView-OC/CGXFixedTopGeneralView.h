@@ -12,7 +12,7 @@ QQ号：974794055
 群名称：
 CGXCategoryView交流群
 群   号：
-版本： 0.4
+版本： 0.7
 */
 
 #ifndef CGXFixedTopGeneralView_h

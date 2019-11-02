@@ -8,7 +8,7 @@
 //
 
 #import "CGXFixedTopGeneralTitleCell.h"
-#import "UIButton+CGXFixedTopGeneralTitleAndImage.h"
+
 @implementation CGXFixedTopGeneralTitleCell
 
 
