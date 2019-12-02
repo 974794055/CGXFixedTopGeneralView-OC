@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "CGXFixedTopGeneralView-OC"    #存储库名称
-s.version      = "0.7"      #版本号，与tag值一致
+s.version      = "0.8"      #版本号，与tag值一致
 s.summary      = "a CGXFixedTopGeneralView-OC 菜单封装"  #简介
 s.description  = "CGXFixedTopGeneralView-OC菜单封装封装"  #描述
 s.homepage     = "https://github.com/974794055/CGXFixedTopGeneralView-OC"      #项目主页，不是git地址

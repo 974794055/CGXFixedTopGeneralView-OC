@@ -3,12 +3,11 @@
 //  CGXFixedTopGeneralView
 //
 //  Created by CGX on 2018/8/8.
-//  git下载链接：https://github.com/974794055/CGXFixedTopGeneralView-OC.git
 //  Copyright © 2018年 CGX. All rights reserved.
 //
 
 #import "CGXFixedTopGeneralTitleView.h"
-
+#import "CGXFixedTopGeneralTitleCell.h"
 @interface CGXFixedTopGeneralTitleView()<CGXFixedTopGeneralTitleCellDelegate>
 
 @property (nonatomic , strong) CGXFixedTopGeneralTitleManager *manager;
@@ -25,7 +24,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
+        _topLineView.frame = CGRectMake(0, 0, CGRectGetWidth(self.bounds), self.manager.lineTopHeight);
+        _bottomLineView.frame = CGRectMake(0, CGRectGetHeight(self.bounds)-self.manager.sliderHeight, CGRectGetWidth(self.bounds), self.manager.sliderHeight);
     }
     return self;
 }
@@ -59,21 +59,7 @@
     if (!_collectionView) {
         UICollectionViewFlowLayout*flowLayout= [[UICollectionViewFlowLayout alloc] init];
         flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        
-        CGFloat yy = 0;
-        CGFloat hSpace = 0;
-        if (self.manager.isTopLine) {
-            yy = self.manager.lineTopHeight;
-        }
-        if (self.manager.isBottomLine) {
-            if (self.manager.isTopLine) {
-                hSpace = self.manager.lineBottomHeight+self.manager.lineTopHeight;
-            }else{
-                hSpace = self.manager.lineBottomHeight;
-            }
-        }
-        
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, yy, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds)-hSpace) collectionViewLayout:flowLayout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds)) collectionViewLayout:flowLayout];
         _collectionView.delegate=self;
         _collectionView.dataSource=self;
         _collectionView.showsVerticalScrollIndicator = NO;
@@ -87,7 +73,27 @@
     }
     return _collectionView;
 }
-
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    CGFloat yy = 0;
+    CGFloat hSpace = 0;
+    if (self.manager.isTopLine) {
+        yy = self.manager.lineTopHeight;
+    }
+    if (self.manager.isBottomLine) {
+        if (self.manager.isTopLine) {
+            hSpace = self.manager.lineBottomHeight+self.manager.lineTopHeight;
+        }else{
+            hSpace = self.manager.lineBottomHeight;
+        }
+    }
+    _collectionView.frame = CGRectMake(0, yy, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds)-hSpace);
+    
+    _topLineView.frame = CGRectMake(0, 0, CGRectGetWidth(self.bounds), self.manager.lineTopHeight);
+    _bottomLineView.frame = CGRectMake(0, CGRectGetHeight(self.bounds)-self.manager.sliderHeight, CGRectGetWidth(self.bounds), self.manager.sliderHeight);
+    
+}
 - (void)setManager:(CGXFixedTopGeneralTitleManager *)manager
 {
     _manager = manager;
@@ -293,6 +299,9 @@
                 return;
             }
         }
+    }
+    if (self.titleArray.count==0) {
+        return;
     }
     self.manager.isFirst = NO;
     self.manager.currentSelected = indexPath.row;

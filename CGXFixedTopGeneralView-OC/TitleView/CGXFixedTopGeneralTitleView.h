@@ -3,7 +3,6 @@
 //  CGXFixedTopGeneralView
 //
 //  Created by CGX on 2018/8/8.
-//  git下载链接：https://github.com/974794055/CGXFixedTopGeneralView-OC.git
 //  Copyright © 2018年 CGX. All rights reserved.
 //
 
@@ -11,9 +10,23 @@
 
 #import "CGXFixedTopGeneralTitleManager.h"
 #import "CGXFixedTopGeneralTitleItem.h"
-#import "CGXFixedTopGeneralTitleCell.h"
+
+@class CGXFixedTopGeneralTitleView;
 
 @protocol CGXFixedTopGeneralTitleViewDelegate;
+
+#pragma mark-------------------TabDelegate-----------------------------
+@protocol CGXFixedTopGeneralTitleViewDelegate <NSObject>
+
+@optional
+
+/*点击事件*/
+- (void)selectIndexCGXFixedTopGeneralTitleView:(CGXFixedTopGeneralTitleView *)baseView didSelectIndex:(NSInteger)index;
+
+/*点击事件*/
+- (void)scrollerIndexCGXFixedTopGeneralTitleView:(CGXFixedTopGeneralTitleView *)baseView didSelectIndex:(NSInteger)index;
+
+@end
 
 @interface CGXFixedTopGeneralTitleView : UIView<UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -41,14 +54,4 @@
 
 @end
 
-#pragma mark-------------------TabDelegate-----------------------------
-@protocol CGXFixedTopGeneralTitleViewDelegate <NSObject>
-
-/*点击事件*/
-- (void)selectIndexCGXFixedTopGeneralTitleView:(CGXFixedTopGeneralTitleView *)baseView didSelectIndex:(NSInteger)index;
-
-/*点击事件*/
-- (void)scrollerIndexCGXFixedTopGeneralTitleView:(CGXFixedTopGeneralTitleView *)baseView didSelectIndex:(NSInteger)index;
-
-@end
 
